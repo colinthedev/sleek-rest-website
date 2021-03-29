@@ -2,8 +2,8 @@
 .indexContainer {
     display: grid;
     background: var(--color-background-white);
-    grid-template-rows: minmax(auto, 22rem) minmax(auto, 52.4rem) repeat(2, minmax(auto, 68.3rem)) minmax(auto, 177.5rem) minmax(auto, 84rem) minmax(auto, 32.8rem) minmax(auto, 44rem);
-    grid-template-columns: [full-start] 1fr [center-start] repeat(12, [col-start] minmax(min-content, 5rem)[col-end]) [center-end] 1fr [full-end];
+    grid-template-rows: minmax(auto, 22rem) minmax(auto, 52.4rem) repeat(2, minmax(auto, 68.3rem)) minmax(auto, 177.5rem) minmax(auto, 104rem) minmax(auto, 32.8rem) minmax(auto, 44rem);
+    grid-template-columns: [full-start] auto [center-start] repeat(12, [col-start] minmax(min-content, 5rem)[col-end]) [center-end] auto [full-end];
 }
 
 .summContainerOne {
@@ -166,3 +166,63 @@
         margin: 0 15% 7.2rem 15%;
     }
 }
+
+.cateringContainer {
+    grid-row: 6 / 7;
+    grid-column: full-start / full-end;
+
+    &__image {
+        @include backgroundImageCatering();
+        max-height: 40rem;
+    }
+}
+
+.sliderContainers {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 11.6rem;
+    margin-bottom: 2.4rem;
+
+    &__sliderBtn {
+        opacity: .5;
+    }
+}
+
+.contentWrapper {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+
+    &__gatheringHeading {
+        margin: 0 0 1.6rem 0;
+    }
+
+    &__txt {
+        width: 85%;
+        margin: 0 auto 3.2rem auto;
+    }
+}
+
+.reservationContainer {
+    position: relative;
+    grid-row: 7 / 8;
+    grid-column: full-start / -1;
+
+    &__heading {
+        display: block;
+        width: 100%;
+        position: absolute;
+        text-align: center;
+        margin: 8rem auto 2.4rem auto;
+        color: #ffffff;
+    }
+
+    &__image {
+        @include backgroundImageFull();
+        height: 100%;
+        width: 100%;
+    }
+    //Button in components.scss
+}
+

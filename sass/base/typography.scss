@@ -25,6 +25,16 @@
     letter-spacing: -0.225px;
 }
 
+.headingMedium {
+    font-family: 'Spartan', sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 28px;
+    text-align: center;
+    letter-spacing: 2px;
+    color: #4C4C4C;
+    // opacity: 0.5;
+}
 //Summary's
 .summary {
     font-family: 'Spartan', sans-serif;
@@ -32,6 +42,15 @@
     line-height: 25px;  
     text-align: center;
     letter-spacing: -0.1875px;
+}
+
+//Footer Txt
+.footerTxt {
+    font-family: 'Spartan', sans-serif;
+    font-size: 14px;
+    line-height: 28px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
 }
 
 //Button Font

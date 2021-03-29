@@ -1,7 +1,6 @@
 //Background Image Properties
 @mixin backgroundImageFull {
     display: block;
-    grid-column: full-start / full-end;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -28,3 +27,25 @@
     width: 90%;
     height: 24.5rem;
 }
+
+@mixin backgroundImageCatering {
+    display: block;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0px 15px 0px rgba(237, 237, 237, .35);
+    margin: 8rem 5% 4.8rem 5%;
+    width: 90%;
+}
+
+//Buttons 
+@mixin bookTableBtn {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 6.4rem;
+    width: 24.5rem;
+    margin: auto;
+}
+
