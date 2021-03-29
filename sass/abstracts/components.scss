@@ -1,0 +1,28 @@
+//Buttons
+.bookTableBtn {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 6.4rem;
+    width: 24.5rem;
+    border: 1px solid #ffffff;
+    margin: auto;
+}
+
+//Lines 
+.divideLine { //Small divide line with circle
+    display: block;
+    position: absolute;
+    top: 36.5rem;
+    margin-left: calc(50% - 40px);
+}
+
+.fullLineBreak { //Full width divide line
+    display: block;
+    margin: 0 auto 2.4rem auto;
+    width: 32.7rem;
+    height: 1px;
+    background: #FFFFFF;
+    opacity: 0.15;
+}

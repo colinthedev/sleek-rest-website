@@ -1,0 +1,30 @@
+//Background Image Properties
+@mixin backgroundImageFull {
+    display: block;
+    grid-column: full-start / full-end;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+}
+
+@mixin backgroundImageSummary {
+    display: block;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0px 15px 0px rgba(237, 237, 237, .35);
+    margin: 0 5% 0 5%;
+    width: 90%;
+    height: 40rem;
+}
+
+@mixin backgroundImageMenu {
+    display: block;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    margin: 0 5% 0 5%;
+    width: 90%;
+    height: 24.5rem;
+}

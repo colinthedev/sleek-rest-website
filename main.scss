@@ -1,0 +1,19 @@
+
+
+@import "sass/abstracts/mixins.scss";
+@import "sass/abstracts/components.scss";
+@import "sass/abstracts/utilities.scss";
+@import "sass/abstracts/variables.scss";
+
+@import "sass/base/reset.scss";
+@import "sass/base/typography.scss";
+
+@import "sass/layout/footer.scss";
+@import "sass/layout/header.scss";
+@import "sass/layout/navigation.scss";
+
+@import "sass/pages/index.scss";
+@import "sass/pages/booking.scss";
+
+@import "sass/mediaQueries/indexMediaQs.scss";
+@import "sass/mediaQueries/bookingMediaQs.scss";

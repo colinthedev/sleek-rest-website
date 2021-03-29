@@ -1,0 +1,168 @@
+
+.indexContainer {
+    display: grid;
+    background: var(--color-background-white);
+    grid-template-rows: minmax(auto, 22rem) minmax(auto, 52.4rem) repeat(2, minmax(auto, 68.3rem)) minmax(auto, 177.5rem) minmax(auto, 84rem) minmax(auto, 32.8rem) minmax(auto, 44rem);
+    grid-template-columns: [full-start] 1fr [center-start] repeat(12, [col-start] minmax(min-content, 5rem)[col-end]) [center-end] 1fr [full-end];
+}
+
+.summContainerOne {
+    grid-row: 3 / 4;
+    grid-column: full-start / full-end;
+}
+
+.summOneWrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    width: 90%;
+    margin: 0 5% 0 5%;
+
+    &__enjoyablePlace {
+        @include backgroundImageSummary();
+        position: absolute;
+        top: -7rem;
+        z-index: 100;
+    }
+
+    &__enjoyableHeading {
+        display: block;
+        margin: 40rem 2.5rem 1.6rem 2.5rem;
+        text-align: center;
+        color: var(--color-text-ebonyClay);
+    }
+
+    &__txt {
+        color: var(--color-text-ebonyClay);
+    }
+
+    // &__enjoyableHeading { //LANDSCAPE 
+    //     width: 90%
+    //     margin: 40rem auto;
+    // }
+}
+
+.summContainerTwo {
+    grid-row: 4 / 5;
+    grid-column: full-start / full-end;
+    margin-top: 8rem;
+}
+
+.summTwoWrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    width: 90%;
+    margin: 0 5% 0 5%;
+
+    &__localFood {
+        @include backgroundImageSummary();
+        position: absolute;
+        top: -7rem;
+        z-index: 100;
+    }
+
+    &__enjoyableHeading {
+        display: block;
+        margin: 40rem 2.5rem 1.6rem 2.5rem;
+        text-align: center;
+        color: var(--color-text-ebonyClay);
+    }
+
+    &__txt {
+        color: var(--color-text-ebonyClay);
+    }
+}
+
+.menuContainer {
+    grid-row: 5 / 6;
+    grid-column: full-start / full-end;
+    margin-top: 8rem;
+    background: var(--color-background-codGray);
+}
+
+.menuWrapper {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.menuHeadingWrapper {
+    margin: 0 10% 6.4rem 10%;
+
+    &__divideLine {
+        margin-top: 7.2rem;
+    }
+
+    &__highLightsHeading {
+        margin: 3.2rem 0 1.6rem 0;
+        color: var(--color-text-white);
+    }
+
+    &__txt {
+        margin: 0 0 6.4rem 0;
+        color: var(--color-text-white);
+
+    }
+}
+
+.salmonWrapper {
+    display: flex;
+    flex-direction: column;
+
+    &__salmon {
+        @include backgroundImageMenu();
+    }
+
+    &__heading {
+        color: var(--color-text-white);
+        margin: 3.2rem 0 .4rem 0;
+    }
+
+    &__txt {
+        color: var(--color-text-white);
+        margin: 0 15% 2.4rem 15%;
+    }
+}
+
+.filetWrapper {
+    display: flex;
+    flex-direction: column;
+
+    &__filet {
+        @include backgroundImageMenu();
+    }
+
+    &__heading {
+        color: var(--color-text-white);
+        margin: 3.2rem 0 .4rem 0;
+    }
+
+    &__txt {
+        color: var(--color-text-white);
+        margin: 0 15% 2.4rem 15%;
+    }
+}
+
+.mousseWrapper {
+    display: flex;
+    flex-direction: column;
+
+    &__mousse {
+        @include backgroundImageMenu();
+
+    }
+
+    &__heading {
+        color: var(--color-text-white);
+        margin: 3.2rem 0 .4rem 0;
+    }
+
+    &__txt {
+        color: var(--color-text-white);
+        margin: 0 15% 7.2rem 15%;
+    }
+}
