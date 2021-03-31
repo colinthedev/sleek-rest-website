@@ -2,7 +2,7 @@
 .indexContainer {
     display: grid;
     background: var(--color-background-white);
-    grid-template-rows: minmax(auto, 22rem) minmax(auto, 52.4rem) repeat(2, minmax(auto, 68.3rem)) minmax(auto, 177.5rem) minmax(auto, 104rem) minmax(auto, 32.8rem) minmax(auto, 44rem);
+    grid-template-rows: minmax(auto, 22rem) minmax(auto, 52.4rem) repeat(2, minmax(auto, 68.3rem)) minmax(auto, 179.2rem) minmax(auto, 104rem) minmax(auto, 32.8rem) minmax(auto, 44rem);
     grid-template-columns: [full-start] auto [center-start] repeat(12, [col-start] minmax(min-content, 5rem)[col-end]) [center-end] auto [full-end];
 }
 
@@ -20,10 +20,14 @@
     margin: 0 5% 0 5%;
 
     &__enjoyablePlace {
-        @include backgroundImageSummary();
+        @include imageSummary();
         position: absolute;
         top: -7rem;
         z-index: 100;
+    }
+
+    &__enjoyablePlaceTablet {
+        display: none;
     }
 
     &__enjoyableHeading {
@@ -34,6 +38,7 @@
     }
 
     &__txt {
+        text-align: center;
         color: var(--color-text-ebonyClay);
     }
 
@@ -58,10 +63,14 @@
     margin: 0 5% 0 5%;
 
     &__localFood {
-        @include backgroundImageSummary();
+        @include imageSummary();
         position: absolute;
         top: -7rem;
         z-index: 100;
+    }
+
+    &__localFoodTablet {
+        display: none;
     }
 
     &__enjoyableHeading {
@@ -72,6 +81,7 @@
     }
 
     &__txt {
+        text-align: center;
         color: var(--color-text-ebonyClay);
     }
 }
@@ -87,11 +97,11 @@
     height: 100%;
     display: flex;
     flex-direction: column;
-    text-align: center;
 }
 
 .menuHeadingWrapper {
-    margin: 0 10% 6.4rem 10%;
+    margin: 0 2rem 6.4rem 2rem;
+    text-align: center;
 
     &__divideLine {
         margin-top: 7.2rem;
@@ -105,7 +115,6 @@
     &__txt {
         margin: 0 0 6.4rem 0;
         color: var(--color-text-white);
-
     }
 }
 
@@ -114,17 +123,27 @@
     flex-direction: column;
 
     &__salmon {
-        @include backgroundImageMenu();
+        @include imageMenu();
     }
 
-    &__heading {
-        color: var(--color-text-white);
-        margin: 3.2rem 0 .4rem 0;
+    &__salmonTabDesktop {
+        display: none;
     }
 
-    &__txt {
-        color: var(--color-text-white);
-        margin: 0 15% 2.4rem 15%;
+    &__inner {
+
+        &-heading {
+            color: var(--color-text-white);
+            margin: 3.2rem 0 .4rem 0;
+        }
+    
+        &-txt {
+            color: var(--color-text-white);
+            margin: 0 auto 0 auto;
+            width: 90%;
+            display: block;
+            text-align: center;
+        }
     }
 }
 
@@ -133,17 +152,27 @@
     flex-direction: column;
 
     &__filet {
-        @include backgroundImageMenu();
+        @include imageMenu();
     }
 
-    &__heading {
-        color: var(--color-text-white);
-        margin: 3.2rem 0 .4rem 0;
+    &__filetTabDesktop {
+        display: none;
     }
 
-    &__txt {
-        color: var(--color-text-white);
-        margin: 0 15% 2.4rem 15%;
+    &__inner {
+
+        &-heading {
+            color: var(--color-text-white);
+            margin: 3.2rem 0 .4rem 0;
+        }
+    
+        &-txt {
+            color: var(--color-text-white);
+            margin: 0 auto 0 auto;
+            width: 90%;
+            display: block;
+            text-align: center;
+        }
     }
 }
 
@@ -152,18 +181,28 @@
     flex-direction: column;
 
     &__mousse {
-        @include backgroundImageMenu();
-
+        @include imageMenu();
     }
 
-    &__heading {
-        color: var(--color-text-white);
-        margin: 3.2rem 0 .4rem 0;
+    &__mousseTabDesktop {
+        display: none;
     }
 
-    &__txt {
-        color: var(--color-text-white);
-        margin: 0 15% 7.2rem 15%;
+    &__inner {
+        margin-bottom: 7.2rem;
+
+        &-heading {
+            color: var(--color-text-white);
+            margin: 3.2rem 0 .4rem 0;
+        }
+    
+        &-txt {
+            color: var(--color-text-white);
+            margin: 0 auto 0 auto;
+            width: 90%;
+            display: block;
+            text-align: center;
+        }
     }
 }
 
@@ -172,7 +211,7 @@
     grid-column: full-start / full-end;
 
     &__image {
-        @include backgroundImageCatering();
+        @include imageCatering();
         max-height: 40rem;
     }
 }

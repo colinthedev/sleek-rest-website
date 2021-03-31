@@ -1,0 +1,23 @@
+
+@media only screen and (min-device-width: 768px) {
+
+    .headerContainer {
+
+        &__missionStatement {
+            margin: 0 10rem 3.2rem 10rem;
+        }
+    }
+
+    .headerImgContainer {
+
+        &__image {
+            display: none;
+        }
+
+        &__imageTablet {
+            @include backgroundImageFull();
+            max-height: 74rem;
+            opacity: 95%;
+        }
+    }
+}

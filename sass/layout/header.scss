@@ -8,6 +8,10 @@
         max-height: 74rem;
         opacity: 95%;
     }
+
+    &__imageTablet {
+        display: none;
+    }
 }
 
 .headerContainer {
@@ -15,15 +19,17 @@
     grid-column: full-start / full-end;
     background: var(--color-background-codGray);
     z-index: 100;
-}
 
-.since1989 {
-    margin: 3.2rem auto 2.4rem auto;
-    color: #FFFFFF;
-}
-
-.missionStatement {
-    display: block;
-    margin: 0 2.4rem 3.2rem 2.4rem;
-    color: #FFFFFF;
+    &__since1989 {
+        text-align: center;
+        margin: 3.2rem auto 2.4rem auto;
+        color: #FFFFFF;
+    }
+    
+    &__missionStatement {
+        display: block;
+        text-align: center;
+        margin: 0 2.4rem 3.2rem 2.4rem;
+        color: #FFFFFF;
+    }
 }

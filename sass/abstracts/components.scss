@@ -37,6 +37,37 @@
     }
 }
 
+//Curves
+.topLeftCurve {
+    display: none;
+}
+
+.botRightCurve {
+    display: none;
+}
+
+//Curves Media Queries
+@media only screen and (min-device-width: 768px) {
+
+    .topLeftCurve {
+        display: block;
+        position: absolute;
+        left: -55.5rem;
+        top: 12.25rem;
+        border-radius: 100px 0px 0px 0px;
+    }
+
+    .botRightCurve {
+        display: block;
+        grid-column: full-start / -1;
+        position: absolute;
+        left: 34.4rem;
+        bottom: -11rem;
+        border-radius: 100px 0px 0px 0px;
+        overflow-x: hidden;
+    }
+}
+
 //Lines 
 .divideLine { //Small divide line with circle
     display: block;
@@ -45,11 +76,27 @@
     margin-left: calc(50% - 40px);
 }
 
+.hamburgerLines {
+    display: none;
+}
+
 .fullLineBreak { //Full width divide line
     display: block;
-    margin: 0 auto 2.4rem auto;
-    width: 32.7rem;
+    margin: 2.4rem auto 2.4rem auto;
+    width: 80%;
     height: 1px;
     background: #FFFFFF;
     opacity: 0.15;
+}
+
+//Lines Media Queries
+@media only screen and (min-device-width: 768px) {
+    
+    .hamburgerLines {
+        display: block;
+        position: absolute;
+        right: -1.5rem;
+        top: 20rem;
+        z-index: 1000;
+    }
 }

@@ -1,0 +1,183 @@
+
+@media only screen and (max-device-width: 767px) and (orientation: landscape) {
+    //Images
+    .salmonWrapper__salmon,
+    .filetWrapper__filet,
+    .mousseWrapper__mousse {
+        margin: 0 14.10% 0 14.10%;
+        width: 70%;
+    }
+}
+
+@media only screen and (min-device-width: 768px) and (orientation:landscape) {
+    .indexContainer {
+        grid-template-rows: minmax(auto, 30rem) minmax(auto, 61.4rem) repeat(2, minmax(auto, 68.3rem)) minmax(auto, 100.5rem) minmax(auto, 104rem) minmax(auto, 32.8rem) minmax(auto, 44rem);
+    }
+
+    .menuHeadingWrapper__highLightsHeading {
+        margin: 3.2rem 19.2rem 1.6rem 19.2rem;
+    }
+
+    .menuHeadingWrapper__txt {
+        margin: 0 13rem 5.6rem 13rem;
+    }
+}
+
+@media only screen and (min-device-width: 768px) {
+
+    .indexContainer {
+        grid-template-rows: minmax(auto, 30rem) minmax(auto, 61.4rem) repeat(2, minmax(auto, 68.3rem)) minmax(auto, 110.5rem) minmax(auto, 104rem) minmax(auto, 32.8rem) minmax(auto, 44rem);
+    }
+
+    .summOneWrapper {
+
+    //Images 
+        &__enjoyablePlace {
+            display: none;
+        }
+    
+        &__enjoyablePlaceTablet {
+            @include imageSummary();
+            position: absolute;
+            top: -7rem;
+            z-index: 100;
+        }
+    //Images END
+
+        &__enjoyableHeading {
+            margin: 40rem 19rem 1.6rem 19rem;
+        }
+
+        &__txt {
+            margin: 0 12.5rem 0 12.5rem;
+        }
+    }
+
+    .summTwoWrapper {
+
+    //Images
+        &__localFood {
+            display: none;
+        }
+    
+        &__localFoodTablet {
+            @include imageSummary();
+            position: absolute;
+            top: -7rem;
+            z-index: 100;
+        }
+    //Images END
+
+        &__enjoyableHeading {
+            margin: 40rem 19rem 1.6rem 19rem;
+        }
+    
+        &__txt {
+            margin: 0 12.5rem 0 12.5rem;
+        }
+    }
+
+    //Menu 
+    .menuHeadingWrapper {
+        margin: 0 10% 0 10%;
+
+        &__divideLine {
+            margin-top: 9.6rem;
+        }
+
+        &__highLightsHeading {
+            margin: 3.2rem 13.2rem 1.6rem 13.2rem;
+        }
+
+        &__txt {
+            display: flex;
+            margin: 0 8rem 5.6rem 8rem;
+        }
+    }
+
+    .salmonWrapper {
+        flex-direction: row;
+
+
+        &__salmon {
+            display: none;
+        }
+    
+        &__salmonTabDesktop {
+            @include imageMenuTabDesktop();
+        }
+
+        &__inner {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            width: 52%;
+
+            &-heading {
+                margin: 0;
+            }
+
+            &-txt {
+                margin: 0;
+                text-align: left;
+            }
+        }
+    }
+
+    .filetWrapper {
+        flex-direction: row;
+    
+        &__filet {
+            display: none;
+        }
+
+        &__filetTabDesktop {
+            @include imageMenuTabDesktop();
+        }
+    
+        &__inner {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            width: 52%;
+    
+            &-heading {
+                margin: 0;
+            }
+        
+            &-txt {
+                margin: 0;
+                text-align: left;
+            }
+        }
+    }
+
+    .mousseWrapper {
+        flex-direction: row;
+
+        &__mousse {
+            display: none;
+        }
+
+        &__mousseTabDesktop {
+            @include imageMenuTabDesktop();
+        }
+    
+        &__inner {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            width: 52%;
+            margin-bottom: 7.2rem;
+    
+            &-heading {
+                margin: 0;
+            }
+        
+            &-txt {
+                margin: 0;
+                text-align: left;
+            }
+        }
+    }
+}
