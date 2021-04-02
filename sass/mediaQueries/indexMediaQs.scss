@@ -26,7 +26,7 @@
 @media only screen and (min-device-width: 768px) {
 
     .indexContainer {
-        grid-template-rows: minmax(auto, 30rem) minmax(auto, 61.4rem) repeat(2, minmax(auto, 68.3rem)) minmax(auto, 110.5rem) minmax(auto, 104rem) minmax(auto, 32.8rem) minmax(auto, 44rem);
+        grid-template-rows: minmax(auto, 30rem) minmax(auto, 61.4rem) repeat(2, minmax(auto, 68.3rem)) minmax(auto, 110.5rem) minmax(auto, 104rem) minmax(auto, 27.2rem) minmax(auto, 32.8rem);
     }
 
     .summOneWrapper {
@@ -178,6 +178,48 @@
                 margin: 0;
                 text-align: left;
             }
+        }
+    }
+
+    .cateringContainer {
+
+        &__inner {
+            position: relative;
+            width: 573px;
+            margin: auto;
+
+            &-image {
+                display: none;
+            }
+
+            &-imageTablet {
+                @include imageCateringTablet();
+            }
+        }
+    }
+
+    .sliderContainers {
+        flex-direction: row;
+        justify-content: space-around;
+        height: inherit;
+        margin-bottom: 4rem;
+    }
+
+    .contentWrapper { 
+        margin: auto;
+        width: 457px;
+    }
+
+    .reservationContainer {
+
+        &__image {
+            display: none;
+        }
+    
+        &__imageTablet {
+            @include backgroundImageFull();
+            height: 100%;
+            width: 100%;
         }
     }
 }

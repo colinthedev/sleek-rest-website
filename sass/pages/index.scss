@@ -210,9 +210,16 @@
     grid-row: 6 / 7;
     grid-column: full-start / full-end;
 
-    &__image {
-        @include imageCatering();
-        max-height: 40rem;
+    &__inner {
+
+        &-imageTablet {
+            display: none;
+        }
+
+        &-image {
+            @include imageCatering();
+            max-height: 40rem;
+        }
     }
 }
 
@@ -261,6 +268,10 @@
         @include backgroundImageFull();
         height: 100%;
         width: 100%;
+    }
+
+    &__imageTablet {
+        display: none;
     }
     //Button in components.scss
 }

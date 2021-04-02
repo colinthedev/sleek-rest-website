@@ -38,34 +38,16 @@
 }
 
 //Curves
-.topLeftCurve {
+.topLeftCurveSumm {
     display: none;
 }
 
-.botRightCurve {
+.botRightCurveSumm {
     display: none;
 }
 
-//Curves Media Queries
-@media only screen and (min-device-width: 768px) {
-
-    .topLeftCurve {
-        display: block;
-        position: absolute;
-        left: -55.5rem;
-        top: 12.25rem;
-        border-radius: 100px 0px 0px 0px;
-    }
-
-    .botRightCurve {
-        display: block;
-        grid-column: full-start / -1;
-        position: absolute;
-        left: 34.4rem;
-        bottom: -11rem;
-        border-radius: 100px 0px 0px 0px;
-        overflow-x: hidden;
-    }
+.topLeftCurveCater {
+    display: none;
 }
 
 //Lines 
@@ -76,7 +58,11 @@
     margin-left: calc(50% - 40px);
 }
 
-.hamburgerLines {
+.hamburgerLinesSumm {
+    display: none;
+}
+
+.hamburgerLinesCater {
     display: none;
 }
 
@@ -91,12 +77,55 @@
 
 //Lines Media Queries
 @media only screen and (min-device-width: 768px) {
-    
-    .hamburgerLines {
+    //Hamburger SVG
+    .hamburgerLinesSumm {
         display: block;
         position: absolute;
         right: -1.5rem;
         top: 20rem;
         z-index: 1000;
+    }
+
+    .hamburgerLinesCater {
+        display: block;
+        position: absolute;
+        left: -5.5rem;
+        bottom: 32rem;
+        z-index: 1000;
+    }
+
+    //Curve SVG
+    .topLeftCurveSumm {
+        display: block;
+        position: absolute;
+        left: -55.5rem;
+        top: 12.25rem;
+        border-radius: 100px 0px 0px 0px;
+    }
+
+    .botRightCurveSumm {
+        display: block;
+        grid-column: full-start / -1;
+        position: absolute;
+        left: 34.4rem;
+        bottom: -11rem;
+        border-radius: 100px 0px 0px 0px;
+        overflow-x: hidden;
+    }
+
+    .topLeftCurveCater {
+        display: block;
+        grid-column: full-start / -1;
+        position: absolute;
+        left: -51rem;
+        bottom: 20rem;
+        border-radius: 0px 100px 0px 0px;
+        overflow-x: hidden;
+        z-index: -10;
+    }
+
+    //Buttons
+    .btnWrapper__bookTableBtnReserv {
+        margin-top: 15rem;
     }
 }

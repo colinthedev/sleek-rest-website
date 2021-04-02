@@ -1,0 +1,29 @@
+@media only screen and (min-device-width: 768px) {
+    .footerContainer {
+        grid-row: 8 / 9;
+        grid-column: full-start / full-end;
+        background: var(--color-background-codGray);
+        color: var(--color-text-white);
+        display: flex;
+        flex-direction: row;
+    
+        &__inner {
+            margin-left: 12.9rem;
+    
+            &-locationWrapper {
+                text-align: left;
+                margin: 0 0 3.2rem 0;
+            }
+    
+            &-timeWrapper {
+                text-align: left;
+                margin: 0;
+            }
+        }
+    }
+
+    .footerLogo {
+        margin: 6.4rem 0 auto 3.9rem;
+    }
+
+}

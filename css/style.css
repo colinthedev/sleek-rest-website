@@ -46,35 +46,25 @@
     border: 1px solid #ffffff;
     color: #ffffff; }
 
-.topLeftCurve {
+.topLeftCurveSumm {
   display: none; }
 
-.botRightCurve {
+.botRightCurveSumm {
   display: none; }
 
-@media only screen and (min-device-width: 768px) {
-  .topLeftCurve {
-    display: block;
-    position: absolute;
-    left: -55.5rem;
-    top: 12.25rem;
-    border-radius: 100px 0px 0px 0px; }
+.topLeftCurveCater {
+  display: none; }
 
-  .botRightCurve {
-    display: block;
-    grid-column: full-start / -1;
-    position: absolute;
-    left: 34.4rem;
-    bottom: -11rem;
-    border-radius: 100px 0px 0px 0px;
-    overflow-x: hidden; } }
 .divideLine {
   display: block;
   position: absolute;
   top: 36.5rem;
   margin-left: calc(50% - 40px); }
 
-.hamburgerLines {
+.hamburgerLinesSumm {
+  display: none; }
+
+.hamburgerLinesCater {
   display: none; }
 
 .fullLineBreak {
@@ -86,12 +76,48 @@
   opacity: 0.15; }
 
 @media only screen and (min-device-width: 768px) {
-  .hamburgerLines {
+  .hamburgerLinesSumm {
     display: block;
     position: absolute;
     right: -1.5rem;
     top: 20rem;
-    z-index: 1000; } }
+    z-index: 1000; }
+
+  .hamburgerLinesCater {
+    display: block;
+    position: absolute;
+    left: -5.5rem;
+    bottom: 32rem;
+    z-index: 1000; }
+
+  .topLeftCurveSumm {
+    display: block;
+    position: absolute;
+    left: -55.5rem;
+    top: 12.25rem;
+    border-radius: 100px 0px 0px 0px; }
+
+  .botRightCurveSumm {
+    display: block;
+    grid-column: full-start / -1;
+    position: absolute;
+    left: 34.4rem;
+    bottom: -11rem;
+    border-radius: 100px 0px 0px 0px;
+    overflow-x: hidden; }
+
+  .topLeftCurveCater {
+    display: block;
+    grid-column: full-start / -1;
+    position: absolute;
+    left: -51rem;
+    bottom: 20rem;
+    border-radius: 0px 100px 0px 0px;
+    overflow-x: hidden;
+    z-index: -10; }
+
+  .btnWrapper__bookTableBtnReserv {
+    margin-top: 15rem; } }
 :root {
   --color-background-white: #FFFFFF;
   --color-background-codGray: #111111;
@@ -479,6 +505,7 @@ template {
   font-size: 14px;
   line-height: 28px;
   text-align: center;
+  text-transform: uppercase;
   letter-spacing: 2px;
   color: #4C4C4C; }
 
@@ -537,23 +564,24 @@ template {
   grid-row: 8 / 9;
   grid-column: full-start / full-end;
   background: var(--color-background-codGray);
-  color: var(--color-text-white);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center; }
-  .footerContainer__locationWrapper {
+  color: var(--color-text-white); }
+  .footerContainer__inner {
     display: flex;
     flex-direction: column;
-    width: 100%;
-    text-align: center;
-    margin: 4rem; }
-  .footerContainer__timeWrapper {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    text-align: center;
-    margin: 0 0 8rem 0; }
+    justify-content: center;
+    align-items: center; }
+    .footerContainer__inner-locationWrapper {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      text-align: center;
+      margin: 4rem; }
+    .footerContainer__inner-timeWrapper {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      text-align: center;
+      margin: 0 0 8rem 0; }
 
 .indexContainer {
   display: grid;
@@ -727,11 +755,10 @@ template {
 .cateringContainer {
   grid-row: 6 / 7;
   grid-column: full-start / full-end; }
-  .cateringContainer__image {
+  .cateringContainer__inner-imageTablet {
+    display: none; }
+  .cateringContainer__inner-image {
     display: block;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
     box-shadow: 0px 15px 0px rgba(237, 237, 237, 0.35);
     margin: 8rem 5% 4.8rem 5%;
     width: 90%;
@@ -775,12 +802,21 @@ template {
     width: 100%;
     height: 100%;
     width: 100%; }
+  .reservationContainer__imageTablet {
+    display: none; }
 
 @media only screen and (min-device-width: 768px) {
   .headingXlrg {
     font-size: 48px;
     line-height: 64px;
     letter-spacing: -0.6px; }
+
+  .headingXlrgBold {
+    font-size: 40px;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 56px;
+    letter-spacing: -0.5px; }
 
   .summary {
     font-size: 18px;
@@ -817,7 +853,7 @@ template {
     margin: 0 13rem 5.6rem 13rem; } }
 @media only screen and (min-device-width: 768px) {
   .indexContainer {
-    grid-template-rows: minmax(auto, 30rem) minmax(auto, 61.4rem) repeat(2, minmax(auto, 68.3rem)) minmax(auto, 110.5rem) minmax(auto, 104rem) minmax(auto, 32.8rem) minmax(auto, 44rem); }
+    grid-template-rows: minmax(auto, 30rem) minmax(auto, 61.4rem) repeat(2, minmax(auto, 68.3rem)) minmax(auto, 110.5rem) minmax(auto, 104rem) minmax(auto, 27.2rem) minmax(auto, 32.8rem); }
 
   .summOneWrapper__enjoyablePlace {
     display: none; }
@@ -926,6 +962,59 @@ template {
         margin: 0; }
       .mousseWrapper__inner-txt {
         margin: 0;
-        text-align: left; } }
+        text-align: left; }
+
+  .cateringContainer__inner {
+    position: relative;
+    width: 573px;
+    margin: auto; }
+    .cateringContainer__inner-image {
+      display: none; }
+    .cateringContainer__inner-imageTablet {
+      display: block;
+      box-shadow: 0px 15px 0px rgba(237, 237, 237, 0.35);
+      margin: 12rem auto 5.6rem auto;
+      width: 573px;
+      z-index: 100; }
+
+  .sliderContainers {
+    flex-direction: row;
+    justify-content: space-around;
+    height: inherit;
+    margin-bottom: 4rem; }
+
+  .contentWrapper {
+    margin: auto;
+    width: 457px; }
+
+  .reservationContainer__image {
+    display: none; }
+  .reservationContainer__imageTablet {
+    display: block;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+    width: 100%; } }
+@media only screen and (min-device-width: 768px) {
+  .footerContainer {
+    grid-row: 8 / 9;
+    grid-column: full-start / full-end;
+    background: var(--color-background-codGray);
+    color: var(--color-text-white);
+    display: flex;
+    flex-direction: row; }
+    .footerContainer__inner {
+      margin-left: 12.9rem; }
+      .footerContainer__inner-locationWrapper {
+        text-align: left;
+        margin: 0 0 3.2rem 0; }
+      .footerContainer__inner-timeWrapper {
+        text-align: left;
+        margin: 0; }
+
+  .footerLogo {
+    margin: 6.4rem 0 auto 3.9rem; } }
 
 /*# sourceMappingURL=style.css.map */
