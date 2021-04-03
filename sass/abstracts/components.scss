@@ -82,7 +82,7 @@
         display: block;
         position: absolute;
         right: -1.5rem;
-        top: 20rem;
+        top: 17rem;
         z-index: 1000;
     }
 
@@ -122,6 +122,10 @@
         border-radius: 0px 100px 0px 0px;
         overflow-x: hidden;
         z-index: -10;
+    }
+
+    .divideLine { //Small divide line with circle
+        margin-left: 0;
     }
 
     //Buttons

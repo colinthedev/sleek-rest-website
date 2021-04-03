@@ -1,4 +1,4 @@
-
+//Small Phone Landscape
 @media only screen and (max-device-width: 767px) and (orientation: landscape) {
     //Images
     .salmonWrapper__salmon,
@@ -7,8 +7,30 @@
         margin: 0 14.10% 0 14.10%;
         width: 70%;
     }
+
+    .headerContainer__missionStatement {
+        margin: 0 10rem 3.2rem 10rem;
+    }
+
+    .summOneWrapper__enjoyableHeading {
+        margin: 40rem 8rem 1.6rem 8rem;
+    }
+
+    .summTwoWrapper__enjoyableHeading {
+        margin: 40rem 8rem 1.6rem 8rem;
+    }
+
+    .summOneWrapper__txt,
+    .summTwoWrapper__txt {
+        margin: 0 5rem 0 5rem;
+    }
+
+    .menuHeadingWrapper__highLightsHeading {
+        margin: 3.2rem 8rem 1.6rem 8rem;
+    }
 }
 
+//Large Phone Landscape
 @media only screen and (min-device-width: 768px) and (orientation:landscape) {
     .indexContainer {
         grid-template-rows: minmax(auto, 30rem) minmax(auto, 61.4rem) repeat(2, minmax(auto, 68.3rem)) minmax(auto, 100.5rem) minmax(auto, 104rem) minmax(auto, 32.8rem) minmax(auto, 44rem);
@@ -23,13 +45,15 @@
     }
 }
 
+//Tablet
 @media only screen and (min-device-width: 768px) {
 
     .indexContainer {
-        grid-template-rows: minmax(auto, 30rem) minmax(auto, 61.4rem) repeat(2, minmax(auto, 68.3rem)) minmax(auto, 110.5rem) minmax(auto, 104rem) minmax(auto, 27.2rem) minmax(auto, 32.8rem);
+        grid-template-rows: minmax(auto, 30rem) minmax(auto, 61.4rem) repeat(2, minmax(68.3rem, auto)) minmax(auto, 110.5rem) minmax(auto, 104rem) minmax(auto, 27.2rem) minmax(auto, 32.8rem);
     }
 
     .summOneWrapper {
+        align-items: center;
 
     //Images 
         &__enjoyablePlace {
@@ -37,15 +61,12 @@
         }
     
         &__enjoyablePlaceTablet {
-            @include imageSummary();
-            position: absolute;
-            top: -7rem;
-            z-index: 100;
+            @include imageSummaryTablet();
         }
     //Images END
 
         &__enjoyableHeading {
-            margin: 40rem 19rem 1.6rem 19rem;
+            margin: 40rem 14rem 1.6rem 14rem;
         }
 
         &__txt {
@@ -54,6 +75,7 @@
     }
 
     .summTwoWrapper {
+        align-items: center;
 
     //Images
         &__localFood {
@@ -61,15 +83,12 @@
         }
     
         &__localFoodTablet {
-            @include imageSummary();
-            position: absolute;
-            top: -7rem;
-            z-index: 100;
+            @include imageSummaryTablet();
         }
     //Images END
 
         &__enjoyableHeading {
-            margin: 40rem 19rem 1.6rem 19rem;
+            margin: 40rem 14rem 1.6rem 14rem;
         }
     
         &__txt {
@@ -221,5 +240,21 @@
             height: 100%;
             width: 100%;
         }
+    }
+}
+
+@media only screen and (min-device-width: 1003px) and (orientation:landscape) {
+    .headerContainer__missionStatement {
+        margin: 0 15rem 3.2rem 15rem;
+    }
+
+    .summOneWrapper__enjoyableHeading,
+    .summTwoWrapper__enjoyableHeading {
+        margin: 40rem 27rem 1.6rem 27rem;
+    }
+
+    .summOneWrapper__txt,
+    .summTwoWrapper__txt {
+        margin: 0 22.5rem 0 22.5rem;
     }
 }
