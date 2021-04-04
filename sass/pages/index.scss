@@ -9,6 +9,10 @@
 .summContainerOne {
     grid-row: 3 / 4;
     grid-column: full-start / full-end;
+
+    &__inner {
+
+    }
 }
 
 .summOneWrapper {
@@ -52,6 +56,10 @@
     grid-row: 4 / 5;
     grid-column: full-start / full-end;
     margin-top: 8rem;
+
+    &__inner {
+
+    }
 }
 
 .summTwoWrapper {
@@ -91,6 +99,7 @@
     grid-column: full-start / full-end;
     margin-top: 8rem;
     background: var(--color-background-codGray);
+    z-index: 100;
 }
 
 .menuWrapper {

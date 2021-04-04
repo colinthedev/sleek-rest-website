@@ -21,3 +21,18 @@
         }
     }
 }
+
+@media only screen and (min-device-width: 1024px) and (orientation:landscape) {
+
+    .indexContainer {
+        grid-template-rows: minmax(auto, 30rem) minmax(auto, 80rem) repeat(2, minmax(68.3rem, auto)) minmax(auto, 110.5rem) minmax(auto, 104rem) minmax(auto, 27.2rem) minmax(auto, 32.8rem)!important;
+    }
+    
+    .headerImgContainer__imageTablet {
+        max-height: 110rem;
+    }
+
+    .headerContainer__missionStatement {
+        margin: 0 22rem 3.2rem 22rem;
+    }
+}

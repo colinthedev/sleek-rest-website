@@ -52,7 +52,20 @@
         grid-template-rows: minmax(auto, 30rem) minmax(auto, 61.4rem) repeat(2, minmax(68.3rem, auto)) minmax(auto, 110.5rem) minmax(auto, 104rem) minmax(auto, 27.2rem) minmax(auto, 32.8rem);
     }
 
+    .summContainerOne__inner { //For responsive SVGS
+        position: relative;
+        width: 573px;
+        margin: auto;
+    }
+
+    .summContainerTwo__inner { //For responsive SVGS
+        position: relative;
+        width: 573px;
+        margin: auto;
+    }
+
     .summOneWrapper {
+        position: static;
         align-items: center;
 
     //Images 
@@ -66,11 +79,7 @@
     //Images END
 
         &__enjoyableHeading {
-            margin: 40rem 14rem 1.6rem 14rem;
-        }
-
-        &__txt {
-            margin: 0 12.5rem 0 12.5rem;
+            margin: 40rem 0 1.6rem 0;
         }
     }
 
@@ -85,15 +94,7 @@
         &__localFoodTablet {
             @include imageSummaryTablet();
         }
-    //Images END
-
-        &__enjoyableHeading {
-            margin: 40rem 14rem 1.6rem 14rem;
-        }
-    
-        &__txt {
-            margin: 0 12.5rem 0 12.5rem;
-        }
+    //Images END    
     }
 
     //Menu 
@@ -240,21 +241,5 @@
             height: 100%;
             width: 100%;
         }
-    }
-}
-
-@media only screen and (min-device-width: 1003px) and (orientation:landscape) {
-    .headerContainer__missionStatement {
-        margin: 0 15rem 3.2rem 15rem;
-    }
-
-    .summOneWrapper__enjoyableHeading,
-    .summTwoWrapper__enjoyableHeading {
-        margin: 40rem 27rem 1.6rem 27rem;
-    }
-
-    .summOneWrapper__txt,
-    .summTwoWrapper__txt {
-        margin: 0 22.5rem 0 22.5rem;
     }
 }

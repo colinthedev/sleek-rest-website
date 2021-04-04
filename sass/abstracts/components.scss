@@ -81,7 +81,7 @@
     .hamburgerLinesSumm {
         display: block;
         position: absolute;
-        right: -1.5rem;
+        right: -8rem;
         top: 17rem;
         z-index: 1000;
     }
@@ -98,7 +98,7 @@
     .topLeftCurveSumm {
         display: block;
         position: absolute;
-        left: -55.5rem;
+        left: -68.5rem;
         top: 12.25rem;
         border-radius: 100px 0px 0px 0px;
     }
@@ -107,10 +107,11 @@
         display: block;
         grid-column: full-start / -1;
         position: absolute;
-        left: 34.4rem;
+        left: 29.4rem;
         bottom: -11rem;
         border-radius: 100px 0px 0px 0px;
         overflow-x: hidden;
+        z-index: -10;
     }
 
     .topLeftCurveCater {
@@ -133,3 +134,4 @@
         margin-top: 15rem;
     }
 }
+
