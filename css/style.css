@@ -122,6 +122,12 @@
 
   .btnWrapper__bookTableBtnReserv {
     margin-top: 15rem; } }
+@media only screen and (min-device-width: 1400px) {
+  .logo {
+    margin: 6.5rem 0 0 16.7rem; }
+
+  .bookTableBtnHeader {
+    margin: 0 0 19.8rem 16.5rem; } }
 :root {
   --color-background-white: #FFFFFF;
   --color-background-codGray: #111111;
@@ -548,6 +554,8 @@ template {
     opacity: 95%; }
   .headerImgContainer__imageTablet {
     display: none; }
+  .headerImgContainer__imageDesktop {
+    display: none; }
 
 .headerContainer {
   grid-row: 2 / 3;
@@ -616,6 +624,8 @@ template {
     top: -7rem;
     z-index: 100; }
   .summOneWrapper__enjoyablePlaceTablet {
+    display: none; }
+  .summOneWrapper__enjoyablePlaceDesktop {
     display: none; }
   .summOneWrapper__enjoyableHeading {
     display: block;
@@ -826,6 +836,11 @@ template {
     font-size: 18px;
     line-height: 30px;
     letter-spacing: -0.22px; } }
+@media only screen and (min-device-width: 1400px) {
+  .headingXlrg {
+    font-size: 6.4rem;
+    line-height: 72px;
+    letter-spacing: -0.8px; } }
 @media only screen and (min-device-width: 768px) {
   .headerContainer__missionStatement {
     margin: 0 10rem 3.2rem 10rem; }
@@ -849,6 +864,33 @@ template {
 
   .headerContainer__missionStatement {
     margin: 0 22rem 3.2rem 22rem; } }
+@media only screen and (min-device-width: 1400px) {
+  .headerContainer {
+    grid-row: 1 / 2;
+    grid-column: full-start / 5;
+    z-index: 300; }
+    .headerContainer__since1989 {
+      text-align: left;
+      margin: 15.3rem 0 2.4rem 16.5rem;
+      width: 53rem; }
+    .headerContainer__missionStatement {
+      text-align: left;
+      margin: 0 0 4.2rem 16.5rem;
+      width: 44.5rem; }
+
+  .headerImgContainer {
+    grid-column: full-start / full-end;
+    grid-row: 1 / 2;
+    z-index: 200; }
+    .headerImgContainer__image {
+      display: none; }
+    .headerImgContainer__imageTablet {
+      display: none; }
+    .headerImgContainer__imageDesktop {
+      display: block;
+      width: 100%;
+      opacity: .99;
+      height: 100%; } }
 @media only screen and (max-device-width: 767px) and (orientation: landscape) {
   .salmonWrapper__salmon,
   .filetWrapper__filet,
@@ -906,6 +948,8 @@ template {
       position: absolute;
       top: -7rem;
       z-index: 100; }
+    .summOneWrapper__enjoyablePlaceDesktop {
+      display: none; }
     .summOneWrapper__enjoyableHeading {
       margin: 40rem 0 1.6rem 0; }
 
@@ -1025,6 +1069,50 @@ template {
     width: 100%;
     height: 100%;
     width: 100%; } }
+@media only screen and (min-device-width: 1400px) {
+  .indexContainer {
+    grid-template-rows: minmax(auto, 82rem) repeat(2, minmax(auto, 70rem)) minmax(auto, 76rem) minmax(auto, 92rem) repeat(2, minmax(auto, 24rem)) !important;
+    grid-template-columns: [full-start] min(16.5rem) [center-start] repeat(10, [col-start] minmax(10.75rem, auto) [col-end]) [center-end] min(16.5rem) [full-end]; }
+
+  .summContainerOne {
+    grid-row: 2 / 3;
+    grid-column: center-start / center-end;
+    display: inline-block; }
+    .summContainerOne__inner {
+      margin: 0; }
+
+  .summOneWrapper {
+    width: 100%;
+    flex-direction: row; }
+    .summOneWrapper__enjoyablePlace {
+      display: none; }
+    .summOneWrapper__enjoyablePlaceTablet {
+      display: none; }
+    .summOneWrapper__enjoyablePlaceDesktop {
+      position: absolute;
+      top: -7rem;
+      display: block;
+      height: 720px;
+      width: 540px;
+      z-index: 300; }
+    .summOneWrapper__enjoyableHeading {
+      margin-left: 83rem; }
+
+  .summContainerTwo {
+    grid-row: 3 / 4;
+    grid-column: center-start / center-end; }
+
+  .menuContainer {
+    grid-row: 4 / 5;
+    grid-column: full-start / full-end; }
+
+  .cateringContainer {
+    grid-row: 5 / 6;
+    grid-column: center-start / center-end; }
+
+  .reservationContainer {
+    grid-row: 6 / 7;
+    grid-column: full-start / full-end; } }
 @media only screen and (min-device-width: 768px) {
   .footerContainer {
     grid-row: 8 / 9;
@@ -1047,5 +1135,9 @@ template {
 @media only screen and (min-device-width: 1024px) and (orientation: landscape) {
   .footerContainer__inner {
     margin-left: 30%; } }
+@media only screen and (min-device-width: 1400px) {
+  .footerContainer {
+    grid-row: 7 / 8;
+    grid-column: full-start / full-end; } }
 
 /*# sourceMappingURL=style.css.map */

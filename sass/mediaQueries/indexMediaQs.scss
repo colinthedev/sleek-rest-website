@@ -76,6 +76,10 @@
         &__enjoyablePlaceTablet {
             @include imageSummaryTablet();
         }
+
+        &__enjoyablePlaceDesktop {
+            display: none;
+        }
     //Images END
 
         &__enjoyableHeading {
@@ -242,4 +246,75 @@
             width: 100%;
         }
     }
+}
+
+//Desktop
+@media only screen and (min-device-width: 1400px) {
+
+    .indexContainer {
+        grid-template-rows: minmax(auto, 82rem) repeat(2, minmax(auto,70rem)) minmax(auto, 76rem) minmax(auto, 92rem) repeat(2, minmax(auto, 24rem)) !important;
+
+        grid-template-columns: [full-start] min(16.5rem) [center-start] repeat(10, [col-start] minmax(10.75rem, auto)[col-end]) [center-end] min(16.5rem) [full-end];
+    }
+
+    .summContainerOne {
+        grid-row: 2 / 3;
+        grid-column: center-start / center-end;
+        display: inline-block;
+
+        &__inner {
+            margin: 0;
+        }
+    }
+
+    .summOneWrapper {
+        width: 100%;
+        flex-direction: row;
+        
+
+            //Images 
+            &__enjoyablePlace {
+                display: none;
+            }
+        
+            &__enjoyablePlaceTablet {
+                display: none;
+            }
+
+            &__enjoyablePlaceDesktop {
+                position: absolute;
+                top: -7rem;
+                display: block;
+                height: 720px;
+                width: 540px;
+                z-index: 300;
+            }
+        //Images END
+    
+            &__enjoyableHeading {
+                margin-left: 83rem;
+            }
+    }
+
+    .summContainerTwo {
+        grid-row: 3 / 4;
+        grid-column: center-start / center-end;
+    }
+
+    .menuContainer {
+        grid-row: 4 / 5;
+        grid-column: full-start / full-end;    
+    }
+
+    .cateringContainer {
+        grid-row: 5 / 6;
+        grid-column: center-start / center-end;
+    }
+
+    .reservationContainer {
+        grid-row: 6 / 7;
+        grid-column: full-start / full-end;    
+    }
+
+
 }

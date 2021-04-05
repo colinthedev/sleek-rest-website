@@ -22,3 +22,14 @@
         letter-spacing: -0.22px;
     }
 }
+
+//Desktop
+@media only screen and (min-device-width: 1400px) {
+    .headingXlrg {
+        font-size: 6.4rem;
+        line-height: 72px;
+        letter-spacing: -0.8px;
+    }
+
+    
+}

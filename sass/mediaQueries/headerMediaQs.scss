@@ -36,3 +36,46 @@
         margin: 0 22rem 3.2rem 22rem;
     }
 }
+
+//Desktop
+@media only screen and (min-device-width: 1400px) {
+
+    .headerContainer {
+        grid-row: 1 / 2;
+        grid-column: full-start / 5;
+        z-index: 300;
+
+        &__since1989 {
+            text-align: left;
+            margin: 15.3rem 0 2.4rem 16.5rem;
+            width: 53rem;
+        }
+
+        &__missionStatement {
+            text-align: left;
+            margin: 0 0 4.2rem 16.5rem;
+            width: 44.5rem;
+        }
+    }
+
+    .headerImgContainer {
+        grid-column: full-start / full-end;
+        grid-row: 1 / 2;
+        z-index: 200;    
+
+        &__image {
+            display: none;
+        }
+
+        &__imageTablet {
+            display: none;
+        }
+
+        &__imageDesktop {
+            @include backgroundImageDesktop();
+            opacity: .99;
+            height: 100%;
+        }
+    }
+
+}
