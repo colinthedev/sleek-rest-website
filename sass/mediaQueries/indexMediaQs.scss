@@ -26,7 +26,7 @@
 }
 
 //Large Phone Landscape
-@media only screen and (min-device-width: 768px) and (orientation:landscape) {
+@media only screen and (min-width: 768px) and (orientation:landscape) {
     .indexContainer {
         grid-template-rows: minmax(auto, 30rem) minmax(auto, 61.4rem) repeat(2, minmax(auto, 68.3rem)) minmax(auto, 100.5rem) minmax(auto, 104rem) minmax(auto, 32.8rem) minmax(auto, 44rem);
     }
@@ -214,6 +214,10 @@
             &-image {
                 display: none;
             }
+            
+            &-imageDesktop {
+                display: none;
+            }
 
             &-imageTablet {
                 @include imageCateringTablet();
@@ -224,18 +228,26 @@
     .sliderContainers {
         flex-direction: row;
         justify-content: space-around;
+        min-width: 60rem;
         height: inherit;
-        margin-bottom: 4rem;
+        margin: 0 auto 4rem auto;
     }
 
     .contentWrapper { 
         margin: auto;
-        width: 457px;
+
+        &__txt {
+            width: 65%;
+        }
     }
 
     .reservationContainer {
 
         &__image {
+            display: none;
+        }
+
+        &__imageDesktop {
             display: none;
         }
     
@@ -256,7 +268,7 @@
         grid-template-columns: [full-start] min(16.5rem) [center-start] repeat(10, [col-start] minmax(10.75rem, auto)[col-end]) [center-end] min(16.5rem) [full-end];
     }
 
-    //Summary One
+//Summary One
     .summContainerOne {
         grid-row: 2 / 3;
         grid-column: center-start / center-end;
@@ -301,7 +313,7 @@
         }
     }
 
-    //Summary Two
+//Summary Two
     .summContainerTwo {
         grid-row: 3 / 4;
         grid-column: center-start / center-end;
@@ -349,21 +361,142 @@
         }
     }
 
+//Menu Heading
     .menuContainer {
         grid-row: 4 / 5;
         grid-column: full-start / full-end;
         margin-top: 0;    
+        display: flex;
+        flex-direction: row;
     }
 
+    .menuHeadingWrapper {
+        margin: 25.5rem 12rem 24rem 16.5rem;
+        text-align: left;
+        width: 64rem;
+    }
+
+    .menuHeadingWrapper > * {
+        margin: 0;
+    }
+
+    .menuHeadingWrapper__divideLine {
+        margin-bottom: 4.8rem;
+    }
+
+//Menu Items
+    .menuWrapper {
+        margin: 25.5rem auto auto 0;
+        height: inherit;
+    }
+
+    .salmonWrapper {
+        align-items: center;
+
+        &__salmonTabDesktop {
+            margin: 0;
+        }
+
+        &__inner {
+            width: inherit;
+            margin-left: 3rem;
+        }
+    }
+
+    .filetWrapper {
+        align-items: center;
+
+        &__filetTabDesktop {
+            margin: 0;
+        }
+
+        &__inner {
+            width: inherit;
+            margin-left: 3rem;
+        }
+    }
+
+    .mousseWrapper {
+
+        &__mousseTabDesktop {
+            margin: 0;
+        }
+
+        &__inner {
+            width: inherit;
+            margin-left: 3rem;
+        }
+    }
+
+//Catering
     .cateringContainer {
         grid-row: 5 / 6;
         grid-column: center-start / center-end;
+        display: flex;
+
+        &__inner {
+            position: relative;
+            width: 540px;
+            margin: auto 0 auto 0;
+
+            &-image {
+                display: none;
+            }
+            
+            &-imageTablet {
+                display: none;
+            }
+
+            &-imageDesktop {
+                @include imageCateringDesktop();
+            }
+        }
     }
 
+    .contentWrapper {
+        margin: 22.3rem auto 22.3rem 12.5rem;
+        width: 44.5rem;
+
+        &__gatheringHeading {
+            text-align: left;
+        }
+
+        &__txt {
+            width: inherit;
+            margin: 0;
+        }
+    }
+
+    .sliderContainers {
+        flex-direction: column;
+        margin: 7.8rem auto auto 0;
+        height: 12rem;
+        align-items: flex-start;
+        order: 4;
+    }
+
+//Reservation
     .reservationContainer {
         grid-row: 6 / 7;
-        grid-column: full-start / full-end;    
+        grid-column: full-start / full-end;
+
+        &__heading {
+            width: inherit;
+            margin: 8rem auto 2.4rem 16.4rem;
+        }
+
+        &__image {
+            display: none;
+        }
+
+        &__imageTablet {
+            display: none;
+        }
+    
+        &__imageDesktop {
+            @include backgroundImageFull();
+            height: 100%;
+            width: 100%;
+        }
     }
-
-
 }

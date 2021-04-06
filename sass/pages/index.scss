@@ -119,6 +119,7 @@
     }
 
     &__txt {
+        display: flex;
         margin: 0 0 6.4rem 0;
         color: var(--color-text-white);
     }
@@ -218,6 +219,10 @@
 
     &__inner {
 
+        &-imageDesktop {
+            display: none;
+        }
+
         &-imageTablet {
             display: none;
         }
@@ -235,8 +240,10 @@
     justify-content: space-between;
     height: 11.6rem;
     margin-bottom: 2.4rem;
+    order: 1;
 
     &__sliderBtn {
+        cursor: pointer;
         opacity: .5;
     }
 }
@@ -248,11 +255,13 @@
 
     &__gatheringHeading {
         margin: 0 0 1.6rem 0;
+        order: 2;
     }
 
     &__txt {
         width: 85%;
-        margin: 0 auto 3.2rem auto;
+        margin: 0 auto 0 auto;
+        order: 3;
     }
 }
 
@@ -279,6 +288,9 @@
     &__imageTablet {
         display: none;
     }
-    //Button in components.scss
+
+    &__imageDesktop {
+        display: none;
+    }
 }
 

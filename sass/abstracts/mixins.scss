@@ -70,6 +70,14 @@
     z-index: 100;
 }
 
+@mixin imageCateringDesktop {
+    display: block;
+    box-shadow: 0px 15px 0px rgba(237, 237, 237, .35);
+    width: 540px;
+    height: 600px;
+    z-index: 100;
+}
+
 //Buttons 
 @mixin bookTableBtn {
     cursor: pointer;
@@ -78,6 +86,6 @@
     justify-content: center;
     height: 6.4rem;
     width: 24.5rem;
-    margin: auto;
+    margin: 3.2rem auto 0 auto;
 }
 

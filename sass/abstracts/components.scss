@@ -12,13 +12,13 @@
 //Buttons
 .bookTableBtnHeader {
     @include bookTableBtn();
-    margin-top: 3.2rem;
     border: 1px solid #ffffff;
 }
 
 .bookTableBtnSlider {
     @include bookTableBtn();
     background: var(--color-background-codGray);
+    order: 4;
 }
 
 .btnWrapper {
@@ -142,6 +142,7 @@
         margin: 6.5rem 0 0 16.7rem;
     }
 
+//Summary 
     .divideLineL {
         top: 20rem;
         left: 65rem;
@@ -167,8 +168,33 @@
         top: 21rem;
     }
 
+//Catering
+    .topLeftCurveCater {
+        bottom: 45rem;
+    }
+
+    .hamburgerLinesCater {
+        bottom: 56rem;
+    }
+
+    .fullLineBreak { //Full width divide line
+        margin: 2.4rem auto 2.4rem 0;
+        width: 90%;
+    }
+
     //Buttons
     .bookTableBtnHeader {
         margin: 0 0 19.8rem 16.5rem;
+    }
+
+    .bookTableBtnSlider {
+        margin: 3.2rem auto 0 0;
+    }
+
+    .btnWrapper {
+        width: inherit;
+        height: inherit;
+        bottom: 10rem;
+        left: 105rem;
     }
 }
