@@ -10,9 +10,8 @@
     grid-row: 3 / 4;
     grid-column: full-start / full-end;
 
-    &__inner {
-
-    }
+    // &__inner {
+    // }
 }
 
 .summOneWrapper {
@@ -37,33 +36,23 @@
     &__enjoyablePlaceDesktop {
         display: none;
     }
+}
+
+.txtWrapperEnjoy {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
 
     &__enjoyableHeading {
-        display: block;
+        @include summHeading();
         margin: 40rem 0 1.6rem 0;
-        text-align: center;
-        color: var(--color-text-ebonyClay);
     }
-
-    &__txt {
-        text-align: center;
-        color: var(--color-text-ebonyClay);
-    }
-
-    // &__enjoyableHeading { //LANDSCAPE 
-    //     width: 90%
-    //     margin: 40rem auto;
-    // }
 }
 
 .summContainerTwo {
     grid-row: 4 / 5;
     grid-column: full-start / full-end;
     margin-top: 8rem;
-
-    &__inner {
-
-    }
 }
 
 .summTwoWrapper {
@@ -85,17 +74,21 @@
         display: none;
     }
 
-    &__enjoyableHeading {
-        display: block;
-        margin: 40rem 0 1.6rem 0;
-        text-align: center;
-        color: var(--color-text-ebonyClay);
+    &__localFoodDesktop {
+        display: none;
     }
+}
 
-    &__txt {
-        text-align: center;
-        color: var(--color-text-ebonyClay);
-    }
+.txtWrapperLocal__localHeading {
+    @include summHeading();
+    margin: 40rem 0 1.6rem 0;
+
+}
+
+.txtWrapperLocal {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
 }
 
 .menuContainer {

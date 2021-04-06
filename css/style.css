@@ -14,6 +14,7 @@
   height: 6.4rem;
   width: 24.5rem;
   margin: auto;
+  margin-top: 3.2rem;
   border: 1px solid #ffffff; }
 
 .bookTableBtnSlider {
@@ -75,7 +76,7 @@
   background: #FFFFFF;
   opacity: 0.15; }
 
-@media only screen and (min-device-width: 768px) {
+@media only screen and (min-width: 768px) {
   .hamburgerLinesSumm {
     display: block;
     position: absolute;
@@ -95,7 +96,7 @@
     position: absolute;
     left: -68.5rem;
     top: 12.25rem;
-    border-radius: 100px 0px 0px 0px; }
+    border-radius: 0px 100px 0px 0px; }
 
   .botRightCurveSumm {
     display: block;
@@ -122,9 +123,29 @@
 
   .btnWrapper__bookTableBtnReserv {
     margin-top: 15rem; } }
-@media only screen and (min-device-width: 1400px) {
+@media only screen and (min-width: 1400px) {
   .logo {
     margin: 6.5rem 0 0 16.7rem; }
+
+  .divideLineL {
+    top: 20rem;
+    left: 65rem; }
+
+  .divideLineR {
+    top: 14rem;
+    right: 108.75rem; }
+
+  .topLeftCurveSumm {
+    left: -25rem;
+    top: 25rem; }
+
+  .botRightCurveSumm {
+    left: -20rem;
+    bottom: -59.5rem;
+    border-radius: 100px 0px 0px 0px; }
+
+  .hamburgerLinesSumm {
+    top: 21rem; }
 
   .bookTableBtnHeader {
     margin: 0 0 19.8rem 16.5rem; } }
@@ -523,7 +544,9 @@ template {
   font-family: 'Spartan', sans-serif;
   font-size: 15px;
   line-height: 25px;
-  letter-spacing: -0.1875px; }
+  letter-spacing: -0.1875px;
+  text-align: center;
+  color: var(--color-text-ebonyClay); }
 
 .footerTxt {
   font-family: 'Spartan', sans-serif;
@@ -627,14 +650,16 @@ template {
     display: none; }
   .summOneWrapper__enjoyablePlaceDesktop {
     display: none; }
-  .summOneWrapper__enjoyableHeading {
+
+.txtWrapperEnjoy {
+  display: flex;
+  flex-direction: column;
+  align-content: center; }
+  .txtWrapperEnjoy__enjoyableHeading {
     display: block;
-    margin: 40rem 0 1.6rem 0;
     text-align: center;
-    color: var(--color-text-ebonyClay); }
-  .summOneWrapper__txt {
-    text-align: center;
-    color: var(--color-text-ebonyClay); }
+    color: var(--color-text-ebonyClay);
+    margin: 40rem 0 1.6rem 0; }
 
 .summContainerTwo {
   grid-row: 4 / 5;
@@ -662,14 +687,19 @@ template {
     z-index: 100; }
   .summTwoWrapper__localFoodTablet {
     display: none; }
-  .summTwoWrapper__enjoyableHeading {
-    display: block;
-    margin: 40rem 0 1.6rem 0;
-    text-align: center;
-    color: var(--color-text-ebonyClay); }
-  .summTwoWrapper__txt {
-    text-align: center;
-    color: var(--color-text-ebonyClay); }
+  .summTwoWrapper__localFoodDesktop {
+    display: none; }
+
+.txtWrapperLocal__localHeading {
+  display: block;
+  text-align: center;
+  color: var(--color-text-ebonyClay);
+  margin: 40rem 0 1.6rem 0; }
+
+.txtWrapperLocal {
+  display: flex;
+  flex-direction: column;
+  align-content: center; }
 
 .menuContainer {
   grid-row: 5 / 6;
@@ -819,7 +849,7 @@ template {
   .reservationContainer__imageTablet {
     display: none; }
 
-@media only screen and (min-device-width: 768px) {
+@media only screen and (min-width: 768px) {
   .headingXlrg {
     font-size: 48px;
     line-height: 64px;
@@ -836,12 +866,15 @@ template {
     font-size: 18px;
     line-height: 30px;
     letter-spacing: -0.22px; } }
-@media only screen and (min-device-width: 1400px) {
+@media only screen and (min-width: 1400px) {
   .headingXlrg {
     font-size: 6.4rem;
     line-height: 72px;
-    letter-spacing: -0.8px; } }
-@media only screen and (min-device-width: 768px) {
+    letter-spacing: -0.8px; }
+
+  .summary {
+    text-align: left; } }
+@media only screen and (min-width: 768px) {
   .headerContainer__missionStatement {
     margin: 0 10rem 3.2rem 10rem; }
 
@@ -855,7 +888,7 @@ template {
     width: 100%;
     max-height: 74rem;
     opacity: 95%; } }
-@media only screen and (min-device-width: 1024px) and (orientation: landscape) {
+@media only screen and (min-width: 1024px) and (orientation: landscape) {
   .indexContainer {
     grid-template-rows: minmax(auto, 30rem) minmax(auto, 80rem) repeat(2, minmax(68.3rem, auto)) minmax(auto, 110.5rem) minmax(auto, 104rem) minmax(auto, 27.2rem) minmax(auto, 32.8rem) !important; }
 
@@ -864,7 +897,7 @@ template {
 
   .headerContainer__missionStatement {
     margin: 0 22rem 3.2rem 22rem; } }
-@media only screen and (min-device-width: 1400px) {
+@media only screen and (min-width: 1400px) {
   .headerContainer {
     grid-row: 1 / 2;
     grid-column: full-start / 5;
@@ -898,17 +931,13 @@ template {
     margin: 0 14.10% 0 14.10%;
     width: 70%; }
 
-  .headerContainer__missionStatement {
-    margin: 0 10rem 3.2rem 10rem; }
-
-  .summOneWrapper__enjoyableHeading {
+  .txtWrapperEnjoy__enjoyableHeading {
     margin: 40rem 8rem 1.6rem 8rem; }
 
-  .summTwoWrapper__enjoyableHeading {
+  .txtWrapperLocal__localHeading {
     margin: 40rem 8rem 1.6rem 8rem; }
 
-  .summOneWrapper__txt,
-  .summTwoWrapper__txt {
+  .summary {
     margin: 0 5rem 0 5rem; }
 
   .menuHeadingWrapper__highLightsHeading {
@@ -922,7 +951,7 @@ template {
 
   .menuHeadingWrapper__txt {
     margin: 0 13rem 5.6rem 13rem; } }
-@media only screen and (min-device-width: 768px) {
+@media only screen and (min-width: 768px) {
   .indexContainer {
     grid-template-rows: minmax(auto, 30rem) minmax(auto, 61.4rem) repeat(2, minmax(68.3rem, auto)) minmax(auto, 110.5rem) minmax(auto, 104rem) minmax(auto, 27.2rem) minmax(auto, 32.8rem); }
 
@@ -964,6 +993,8 @@ template {
       position: absolute;
       top: -7rem;
       z-index: 100; }
+    .summTwoWrapper__localFoodDesktop {
+      display: none; }
 
   .menuHeadingWrapper {
     margin: 0 10% 0 10%; }
@@ -1069,21 +1100,21 @@ template {
     width: 100%;
     height: 100%;
     width: 100%; } }
-@media only screen and (min-device-width: 1400px) {
+@media only screen and (min-width: 1400px) {
   .indexContainer {
     grid-template-rows: minmax(auto, 82rem) repeat(2, minmax(auto, 70rem)) minmax(auto, 76rem) minmax(auto, 92rem) repeat(2, minmax(auto, 24rem)) !important;
     grid-template-columns: [full-start] min(16.5rem) [center-start] repeat(10, [col-start] minmax(10.75rem, auto) [col-end]) [center-end] min(16.5rem) [full-end]; }
 
   .summContainerOne {
     grid-row: 2 / 3;
-    grid-column: center-start / center-end;
-    display: inline-block; }
+    grid-column: center-start / center-end; }
     .summContainerOne__inner {
       margin: 0; }
 
   .summOneWrapper {
     width: 100%;
-    flex-direction: row; }
+    flex-direction: row;
+    margin: 0; }
     .summOneWrapper__enjoyablePlace {
       display: none; }
     .summOneWrapper__enjoyablePlaceTablet {
@@ -1095,16 +1126,51 @@ template {
       height: 720px;
       width: 540px;
       z-index: 300; }
-    .summOneWrapper__enjoyableHeading {
-      margin-left: 83rem; }
+
+  .txtWrapperEnjoy {
+    flex-direction: column;
+    margin-left: 66rem; }
+    .txtWrapperEnjoy__enjoyableHeading {
+      margin: 23.2rem 0 1.6rem 0;
+      width: 40.5rem;
+      text-align: left; }
 
   .summContainerTwo {
     grid-row: 3 / 4;
-    grid-column: center-start / center-end; }
+    grid-column: center-start / center-end;
+    margin-top: 10.5rem; }
+    .summContainerTwo__inner {
+      margin: 0 0 0 auto; }
+
+  .summTwoWrapper {
+    width: 100%;
+    flex-direction: row; }
+    .summTwoWrapper__localFoodPlace {
+      display: none; }
+    .summTwoWrapper__localFoodTablet {
+      display: none; }
+    .summTwoWrapper__localFoodDesktop {
+      position: absolute;
+      top: -7rem;
+      display: block;
+      height: 720px;
+      width: 540px;
+      z-index: 300; }
+
+  .txtWrapperLocal {
+    flex-direction: column;
+    position: absolute;
+    top: 18rem;
+    right: 69rem;
+    width: 45rem; }
+    .txtWrapperLocal__localHeading {
+      text-align: left;
+      margin: 0 0 1.6rem 0; }
 
   .menuContainer {
     grid-row: 4 / 5;
-    grid-column: full-start / full-end; }
+    grid-column: full-start / full-end;
+    margin-top: 0; }
 
   .cateringContainer {
     grid-row: 5 / 6;
@@ -1113,7 +1179,7 @@ template {
   .reservationContainer {
     grid-row: 6 / 7;
     grid-column: full-start / full-end; } }
-@media only screen and (min-device-width: 768px) {
+@media only screen and (min-width: 768px) {
   .footerContainer {
     grid-row: 8 / 9;
     grid-column: full-start / full-end;
@@ -1135,7 +1201,7 @@ template {
 @media only screen and (min-device-width: 1024px) and (orientation: landscape) {
   .footerContainer__inner {
     margin-left: 30%; } }
-@media only screen and (min-device-width: 1400px) {
+@media only screen and (min-width: 1400px) {
   .footerContainer {
     grid-row: 7 / 8;
     grid-column: full-start / full-end; } }

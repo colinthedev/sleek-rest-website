@@ -1,4 +1,4 @@
-@media only screen and (min-device-width: 768px) {
+@media only screen and (min-width: 768px) {
     .footerContainer {
         grid-row: 8 / 9;
         grid-column: full-start / full-end;
@@ -35,7 +35,7 @@
 }
 
 // Desktop
-@media only screen and (min-device-width: 1400px) {
+@media only screen and (min-width: 1400px) {
 
     .footerContainer {
         grid-row: 7 / 8;

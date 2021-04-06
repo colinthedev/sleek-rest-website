@@ -8,20 +8,15 @@
         width: 70%;
     }
 
-    .headerContainer__missionStatement {
-        margin: 0 10rem 3.2rem 10rem;
-    }
-
-    .summOneWrapper__enjoyableHeading {
+    .txtWrapperEnjoy__enjoyableHeading  {
         margin: 40rem 8rem 1.6rem 8rem;
     }
 
-    .summTwoWrapper__enjoyableHeading {
+    .txtWrapperLocal__localHeading  {
         margin: 40rem 8rem 1.6rem 8rem;
     }
 
-    .summOneWrapper__txt,
-    .summTwoWrapper__txt {
+    .summary {
         margin: 0 5rem 0 5rem;
     }
 
@@ -46,7 +41,7 @@
 }
 
 //Tablet
-@media only screen and (min-device-width: 768px) {
+@media only screen and (min-width: 768px) {
 
     .indexContainer {
         grid-template-rows: minmax(auto, 30rem) minmax(auto, 61.4rem) repeat(2, minmax(68.3rem, auto)) minmax(auto, 110.5rem) minmax(auto, 104rem) minmax(auto, 27.2rem) minmax(auto, 32.8rem);
@@ -97,6 +92,10 @@
     
         &__localFoodTablet {
             @include imageSummaryTablet();
+        }
+
+        &__localFoodDesktop {
+            display: none;
         }
     //Images END    
     }
@@ -249,7 +248,7 @@
 }
 
 //Desktop
-@media only screen and (min-device-width: 1400px) {
+@media only screen and (min-width: 1400px) {
 
     .indexContainer {
         grid-template-rows: minmax(auto, 82rem) repeat(2, minmax(auto,70rem)) minmax(auto, 76rem) minmax(auto, 92rem) repeat(2, minmax(auto, 24rem)) !important;
@@ -257,10 +256,10 @@
         grid-template-columns: [full-start] min(16.5rem) [center-start] repeat(10, [col-start] minmax(10.75rem, auto)[col-end]) [center-end] min(16.5rem) [full-end];
     }
 
+    //Summary One
     .summContainerOne {
         grid-row: 2 / 3;
         grid-column: center-start / center-end;
-        display: inline-block;
 
         &__inner {
             margin: 0;
@@ -270,40 +269,90 @@
     .summOneWrapper {
         width: 100%;
         flex-direction: row;
-        
+        margin: 0;
 
-            //Images 
-            &__enjoyablePlace {
-                display: none;
-            }
-        
-            &__enjoyablePlaceTablet {
-                display: none;
-            }
-
-            &__enjoyablePlaceDesktop {
-                position: absolute;
-                top: -7rem;
-                display: block;
-                height: 720px;
-                width: 540px;
-                z-index: 300;
-            }
-        //Images END
+        //Images 
+        &__enjoyablePlace {
+            display: none;
+        }
     
-            &__enjoyableHeading {
-                margin-left: 83rem;
-            }
+        &__enjoyablePlaceTablet {
+            display: none;
+        }
+
+        &__enjoyablePlaceDesktop {
+            position: absolute;
+            top: -7rem;
+            display: block;
+            height: 720px;
+            width: 540px;
+            z-index: 300;
+        }
     }
 
+    .txtWrapperEnjoy {
+        flex-direction: column;
+        margin-left: 66rem;
+
+        &__enjoyableHeading {
+            margin: 23.2rem 0 1.6rem 0;
+            width: 40.5rem;
+            text-align: left;
+        }
+    }
+
+    //Summary Two
     .summContainerTwo {
         grid-row: 3 / 4;
         grid-column: center-start / center-end;
+        margin-top: 10.5rem;
+
+        &__inner {
+            margin: 0 0 0 auto;
+        }
+    }
+
+    .summTwoWrapper {
+        width: 100%;
+        flex-direction: row;
+        // margin: 15.1rem 16.5rem 0 57rem;
+
+        //Images 
+        &__localFoodPlace {
+            display: none;
+        }
+    
+        &__localFoodTablet {
+            display: none;
+        }
+
+        &__localFoodDesktop {
+            position: absolute;
+            top: -7rem;
+            display: block;
+            height: 720px;
+            width: 540px;
+            z-index: 300;
+        }
+    }
+
+    .txtWrapperLocal {
+        flex-direction: column;
+        position: absolute;
+        top: 18rem;
+        right: 69rem;
+        width: 45rem;
+
+        &__localHeading {
+            text-align: left;
+            margin: 0 0 1.6rem 0;
+        }
     }
 
     .menuContainer {
         grid-row: 4 / 5;
-        grid-column: full-start / full-end;    
+        grid-column: full-start / full-end;
+        margin-top: 0;    
     }
 
     .cateringContainer {

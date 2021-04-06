@@ -12,6 +12,12 @@
     width: 100%;
 }
 
+@mixin summHeading {
+    display: block;
+    text-align: center;
+    color: var(--color-text-ebonyClay);
+}
+
 @mixin imageSummary {
     display: block;
     background-repeat: no-repeat;

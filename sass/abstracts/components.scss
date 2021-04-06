@@ -12,6 +12,7 @@
 //Buttons
 .bookTableBtnHeader {
     @include bookTableBtn();
+    margin-top: 3.2rem;
     border: 1px solid #ffffff;
 }
 
@@ -76,7 +77,7 @@
 }
 
 //Lines Media Queries
-@media only screen and (min-device-width: 768px) {
+@media only screen and (min-width: 768px) {
     //Hamburger SVG
     .hamburgerLinesSumm {
         display: block;
@@ -100,7 +101,7 @@
         position: absolute;
         left: -68.5rem;
         top: 12.25rem;
-        border-radius: 100px 0px 0px 0px;
+        border-radius: 0px 100px 0px 0px;
     }
 
     .botRightCurveSumm {
@@ -136,9 +137,34 @@
 }
 
 //Desktop
-@media only screen and (min-device-width: 1400px) {
+@media only screen and (min-width: 1400px) {
     .logo {
         margin: 6.5rem 0 0 16.7rem;
+    }
+
+    .divideLineL {
+        top: 20rem;
+        left: 65rem;
+    }
+
+    .divideLineR {
+        top: 14rem;
+        right: 108.75rem;
+    }
+
+    .topLeftCurveSumm {
+        left: -25rem;
+        top: 25rem;
+    }
+
+    .botRightCurveSumm {
+        left: -20rem;
+        bottom: -59.5rem;
+        border-radius: 100px 0px 0px 0px;
+    }
+
+    .hamburgerLinesSumm {
+        top: 21rem;
     }
 
     //Buttons

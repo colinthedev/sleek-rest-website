@@ -1,5 +1,5 @@
 
-@media only screen and (min-device-width: 768px) {
+@media only screen and (min-width: 768px) {
 
     .headerContainer {
 
@@ -22,7 +22,7 @@
     }
 }
 
-@media only screen and (min-device-width: 1024px) and (orientation:landscape) {
+@media only screen and (min-width: 1024px) and (orientation:landscape) {
 
     .indexContainer {
         grid-template-rows: minmax(auto, 30rem) minmax(auto, 80rem) repeat(2, minmax(68.3rem, auto)) minmax(auto, 110.5rem) minmax(auto, 104rem) minmax(auto, 27.2rem) minmax(auto, 32.8rem)!important;
@@ -38,7 +38,7 @@
 }
 
 //Desktop
-@media only screen and (min-device-width: 1400px) {
+@media only screen and (min-width: 1400px) {
 
     .headerContainer {
         grid-row: 1 / 2;

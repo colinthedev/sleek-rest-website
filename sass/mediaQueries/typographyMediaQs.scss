@@ -1,5 +1,5 @@
 
-@media only screen and (min-device-width: 768px) {
+@media only screen and (min-width: 768px) {
 
     .headingXlrg {
         font-size: 48px;
@@ -24,12 +24,15 @@
 }
 
 //Desktop
-@media only screen and (min-device-width: 1400px) {
+@media only screen and (min-width: 1400px) {
     .headingXlrg {
         font-size: 6.4rem;
         line-height: 72px;
         letter-spacing: -0.8px;
     }
 
-    
+    .summary {
+        text-align: left;
+    }
+
 }
