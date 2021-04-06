@@ -21,6 +21,16 @@
     order: 4;
 }
 
+
+.sliderContainers__sliderBtn {
+    cursor: pointer;
+    opacity: .5;
+}
+
+.sliderContainers__sliderBtn.active {
+    opacity: 1;
+}
+
 .btnWrapper {
     display: inline-block;
     width: 100%;
