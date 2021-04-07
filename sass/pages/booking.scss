@@ -9,6 +9,14 @@
     grid-row: 1 / 2;
     grid-column: full-start / full-end;
     position: relative;
+
+    &__imageDesktop {
+        display: none;
+    }
+
+    &__imageTablet {
+        display: none;
+    }
     
     &__image {
         @include backgroundImageFull();
@@ -41,12 +49,6 @@
 .svgContainer {
     display: none;
 
-    // position: relative;
-    // width: 540px;
-    // height: 560px;
-    // margin-left: 73.5rem;
-    // top: -10rem;
-
     &__curve {
         display: none;
 
@@ -70,6 +72,7 @@
     height: 58.5rem;
     width: 32.7rem;
     background: var(--color-background-white);
+    box-shadow: 0px 45px 80px 0px #888888;
 }
 
 .inputWrapperTop {
@@ -79,8 +82,7 @@
     &__placehold {
         display: block;
         height: 4.5rem;
-        width: 90%;
-        width: 263px;
+        width: 80%;
         margin: 3.2rem auto 0 auto;
         border-bottom: 1px solid #8E8E8E;
         font-family: 'Spartan', sans-serif;
@@ -97,7 +99,7 @@
     }
 }
 
-.inputWrapperMid {
+.inputWrapperDate {
     // display: flex;
     margin: 3.2rem 19.2rem 0 3.2rem;
     width: 263px;
@@ -148,7 +150,7 @@
     }
 }
 
-.inputWrapperBot {
+.inputWrapperTime {
     margin: 3.2rem 19.2rem 0 3.2rem;
     width: 263px;
 
@@ -203,4 +205,123 @@
             }
         }
     }
+}
+
+.inputWrapperBot {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    height: 5.5rem;
+    border-bottom: 1px solid #8E8E8E;
+
+    &__button {
+
+        &-minus {
+
+        }
+
+        &-plus {
+
+        }
+    }
+}
+
+.reserveBtnBlk {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 6.4rem;
+    width: 24.5rem;
+    margin: 3.2rem auto 0 auto;
+    background: var(--btn-background-blk);
+}
+
+//Tablet
+@media only screen and (min-width: 768px) {
+
+    .bookingContainer {
+        grid-template-rows: minmax(auto, 60rem) minmax(auto, 53rem)minmax(auto, 32.8rem);
+        grid-template-columns: [full-start] min(11.4rem) [center-start] repeat(4, [col-start] minmax(10.75rem, auto)[col-end]) [center-end] min(11.4rem) [full-end];
+    }
+
+    .bookingRowOne {
+    
+        &__imageDesktop {
+            display: none;
+        }
+    
+        &__imageTablet {
+            @include backgroundImageFull();
+            height: 100%;
+            width: 100%;
+        }
+        
+        &__image {
+            display: none;
+        }
+    }
+
+    .rowOneWrapper {
+        top: 0;
+
+        &__txt {
+            margin: 1.6rem 9.8rem 4rem 9.8rem;
+        }
+    }
+
+    .forumContainer {
+        height: 54.5rem;
+        width: 54rem;
+        top: 39rem;
+    }
+
+    .inputWrapperDate {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        width: 80%;
+        margin: 3.2rem 4.8rem 3.2rem 4.8rem;
+
+        &__row {
+            margin: 0;
+        }
+
+        &__txt {
+            margin-right: 5.2rem;
+        }
+    }
+
+    .inputWrapperTime {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        width: 80%;
+        margin: 3.2rem 4.8rem 3.2rem 4.8rem;
+
+        &__row {
+            margin: 0;
+
+            &-placehold--arrow {
+                right: 8rem;
+                bottom: 25.75rem;
+            }
+        }
+
+        &__txt {
+            margin-right: 5.2rem;
+        }
+    }
+
+    .inputWrapperBot {
+        width: 80%;
+        margin: 0 auto 0 auto;
+    }
+
+    .reserveBtnBlk {
+        width: 80%;
+    }
+
 }

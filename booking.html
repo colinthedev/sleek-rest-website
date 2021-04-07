@@ -18,8 +18,8 @@
 <body class="bookingContainer">
   <div class="bookingRowOne">
     <img src="/images/booking/hero-bg-mobile@2x.jpg" alt="plate of food" class="bookingRowOne__image">
-      <!-- <img src="/images/booking/hero-bg-tablet@2x.jpg" alt="plate of food" class="bookingRowOne__imageTablet">
-        <img src="/images/booking/hero-bg-desktop@2x.jpg" alt="plate of food" class="bookingRowOne__imageDesktop"> -->
+      <img src="/images/booking/hero-bg-tablet@2x.jpg" alt="plate of food" class="bookingRowOne__imageTablet">
+        <img src="/images/booking/hero-bg-desktop@2x.jpg" alt="plate of food" class="bookingRowOne__imageDesktop">
     <div class="rowOneWrapper">
       <img src="/images/logo.svg" alt="Brand name" class="bookingLogo">
       <h1 class="rowOneWrapper__header headingXlrg">Reservations</h1>
@@ -43,36 +43,46 @@
         </label>
       </div>
 
-      <div class="inputWrapperMid">
-        <label for="Pick a date" class="inputWrapperMid__txt">
+      <div class="inputWrapperDate">
+        <label for="Pick a date" class="inputWrapperDate__txt">
           <b>Pick a date</b>
         </label>
-        <div class="inputWrapperMid__row">
-          <input type="text" class="inputWrapperMid__row-placehold inputWrapperMid__row-placehold--month" placeholder="MM" name="Month" required>
-          <input type="text" class="inputWrapperMid__row-placehold inputWrapperMid__row-placehold--day" placeholder="DD" name="Day" required>
-          <input type="text" class="inputWrapperMid__row-placehold inputWrapperMid__row-placehold--year" placeholder="YYYY" name="Year" required>
+        <div class="inputWrapperDate__row">
+          <input type="text" class="inputWrapperDate__row-placehold inputWrapperDate__row-placehold--month" placeholder="MM" name="Month" required>
+          <input type="text" class="inputWrapperDate__row-placehold inputWrapperDate__row-placehold--day" placeholder="DD" name="Day" required>
+          <input type="text" class="inputWrapperDate__row-placehold inputWrapperDate__row-placehold--year" placeholder="YYYY" name="Year" required>
+        </div>
+      </div>
+
+      <div class="inputWrapperTime">
+        <label for="Pick a time" class="inputWrapperTime__txt">
+          <b>Pick a time</b>
+        </label>
+        <div class="inputWrapperTime__row">
+          <input type="text" class="inputWrapperTime__row-placehold inputWrapperTime__row-placehold--hour" placeholder="09" name="hour" required>
+          <input type="text" class="inputWrapperTime__row-placehold inputWrapperTime__row-placehold--minute" placeholder="00" name="minute" required>
+          <input type="button" onclick="func();" value="AM" class="inputWrapperTime__row-placehold inputWrapperTime__row-placehold--amPM" >
+          <img src="/images/icons/icon-arrow.svg" alt="Expandable arrow button" class="inputWrapperTime__row-placehold--arrow">
         </div>
       </div>
 
       <div class="inputWrapperBot">
-        <label for="Pick a time" class="inputWrapperBot__txt">
-          <b>Pick a time</b>
-        </label>
-        <div class="inputWrapperBot__row">
-          <input type="text" class="inputWrapperBot__row-placehold inputWrapperBot__row-placehold--hour" placeholder="09" name="hour" required>
-          <input type="text" class="inputWrapperBot__row-placehold inputWrapperBot__row-placehold--minute" placeholder="00" name="minute" required>
-          <input type="button" onclick="func();" value="AM" class="inputWrapperBot__row-placehold inputWrapperBot__row-placehold--amPM" >
-          <img src="/images/icons/icon-arrow.svg" alt="Expandable arrow button" class="inputWrapperBot__row-placehold--arrow">
-        </div>
+        <button onclick="func();" class="inputWrapperBot__button">
+          <img src="/images/icons/icon-minus.svg" alt="minus button" class="inputWrapperBot__button-minus">
+        </button>
+        <h2 id="guests" class="headingLrg">4 people</h2>
+        <button onclick="func();" class="inputWrapperBot__button">
+          <img src="/images/icons/icon-plus.svg" alt="plus button" class="inputWrapperBot__button-plus">
+        </button>
       </div>
 
       <button class="bookTableTxt reserveBtnBlk">Make Reservation</button>
     </div>
   </div>
 
-  <div class="footerContainer">
+  <div class="footerContainerBooking">
     <img src="/images/logo.svg" alt="Brand name" class="footerLogo">
-    <div style="margin-bottom:7rem;" class="footerContainer__inner">
+    <div class="footerContainer__inner">
       <div class="footerContainer__inner-locationWrapper">
         <span class="footerTxt">Marthwaite, Sedbergh</span>
         <span class="footerTxt">Cumbria</span>

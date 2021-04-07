@@ -104,6 +104,14 @@
 
 //Lines Media Queries
 @media only screen and (min-width: 768px) {
+    .bookingLogo {
+        margin: 5.6rem 90% 6.4rem 3.9rem;
+    }
+
+    .reserveBtn {
+        display: none;
+    }
+
     //Hamburger SVG
     .hamburgerLinesSumm {
         display: block;

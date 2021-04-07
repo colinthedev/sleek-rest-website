@@ -97,6 +97,12 @@
   opacity: 0.15; }
 
 @media only screen and (min-width: 768px) {
+  .bookingLogo {
+    margin: 5.6rem 90% 6.4rem 3.9rem; }
+
+  .reserveBtn {
+    display: none; }
+
   .hamburgerLinesSumm {
     display: block;
     position: absolute;
@@ -200,10 +206,7 @@
   --color-text-btn-gray: #4C4C4C;
   --color-text-btn-white: #FFFFFF;
   --color-text-btn-black: #111111;
-  --color-text-btn-blue: #FFFFFF;
-  --color-text-btn-blue-hover: #17192B;
-  --color-text-btn-gray: #111111;
-  --color-text-btn-gray-hover: #FFFFFF;
+  --btn-background-blk:#111111;
   --color-lines-beaver: #9e7f66;
   --color-background-shuttleGray: #5C6779; }
 
@@ -656,6 +659,12 @@ template {
       width: 100%;
       text-align: center; }
 
+.footerContainerBooking {
+  grid-row: 3 / 4;
+  grid-column: full-start / full-end;
+  background: var(--color-background-codGray);
+  color: var(--color-text-white); }
+
 .indexContainer {
   display: grid;
   background: var(--color-background-white);
@@ -904,6 +913,10 @@ template {
   grid-row: 1 / 2;
   grid-column: full-start / full-end;
   position: relative; }
+  .bookingRowOne__imageDesktop {
+    display: none; }
+  .bookingRowOne__imageTablet {
+    display: none; }
   .bookingRowOne__image {
     display: block;
     background-repeat: no-repeat;
@@ -946,7 +959,8 @@ template {
   margin-right: auto;
   height: 58.5rem;
   width: 32.7rem;
-  background: var(--color-background-white); }
+  background: var(--color-background-white);
+  box-shadow: 0px 45px 80px 0px #888888; }
 
 .inputWrapperTop {
   display: flex;
@@ -954,8 +968,7 @@ template {
   .inputWrapperTop__placehold {
     display: block;
     height: 4.5rem;
-    width: 90%;
-    width: 263px;
+    width: 80%;
     margin: 3.2rem auto 0 auto;
     border-bottom: 1px solid #8E8E8E;
     font-family: 'Spartan', sans-serif;
@@ -968,22 +981,22 @@ template {
   .inputWrapperTop__placehold:focus {
     opacity: 1; }
 
-.inputWrapperMid {
+.inputWrapperDate {
   margin: 3.2rem 19.2rem 0 3.2rem;
   width: 263px; }
-  .inputWrapperMid__txt {
+  .inputWrapperDate__txt {
     font-family: 'Spartan', sans-serif;
     font-weight: 300;
     font-size: 18px;
     line-height: 28px;
     letter-spacing: -0.225px;
     color: #111111; }
-  .inputWrapperMid__row {
+  .inputWrapperDate__row {
     display: flex;
     flex-wrap: nowrap;
     margin: .8rem auto 3.2rem 0;
     height: 45px; }
-    .inputWrapperMid__row-placehold {
+    .inputWrapperDate__row-placehold {
       text-align: center;
       font-family: 'Spartan', sans-serif;
       font-size: 18px;
@@ -991,56 +1004,134 @@ template {
       letter-spacing: -0.225px;
       color: #111111;
       opacity: 0.5; }
-      .inputWrapperMid__row-placehold--month, .inputWrapperMid__row-placehold--day {
+      .inputWrapperDate__row-placehold--month, .inputWrapperDate__row-placehold--day {
         width: 7.3rem;
         border-bottom: 1px solid #8E8E8E;
         margin-right: 1.4rem; }
-      .inputWrapperMid__row-placehold--year {
+      .inputWrapperDate__row-placehold--year {
         width: 8.8rem;
         border-bottom: 1px solid #8E8E8E; }
-      .inputWrapperMid__row-placehold--month:focus, .inputWrapperMid__row-placehold--day:focus, .inputWrapperMid__row-placehold--year:focus {
+      .inputWrapperDate__row-placehold--month:focus, .inputWrapperDate__row-placehold--day:focus, .inputWrapperDate__row-placehold--year:focus {
         opacity: 1; }
 
-.inputWrapperBot {
+.inputWrapperTime {
   margin: 3.2rem 19.2rem 0 3.2rem;
   width: 263px; }
-  .inputWrapperBot__txt {
+  .inputWrapperTime__txt {
     font-family: 'Spartan', sans-serif;
     font-weight: 300;
     font-size: 18px;
     line-height: 28px;
     letter-spacing: -0.225px;
     color: #111111; }
-  .inputWrapperBot__row {
+  .inputWrapperTime__row {
     display: flex;
     flex-wrap: nowrap;
     margin: .8rem auto 3.2rem 0;
     height: 45px; }
-    .inputWrapperBot__row-placehold {
+    .inputWrapperTime__row-placehold {
       text-align: center;
       font-family: 'Spartan', sans-serif;
       font-size: 18px;
       line-height: 28px;
       letter-spacing: -0.225px;
       color: #111111; }
-      .inputWrapperBot__row-placehold--hour, .inputWrapperBot__row-placehold--minute {
+      .inputWrapperTime__row-placehold--hour, .inputWrapperTime__row-placehold--minute {
         width: 7.3rem;
         border-bottom: 1px solid #8E8E8E;
         margin-right: 1.4rem;
         opacity: 0.5; }
-      .inputWrapperBot__row-placehold--hour:focus, .inputWrapperBot__row-placehold--minute:focus {
+      .inputWrapperTime__row-placehold--hour:focus, .inputWrapperTime__row-placehold--minute:focus {
         opacity: 1; }
-      .inputWrapperBot__row-placehold--amPM {
+      .inputWrapperTime__row-placehold--amPM {
         position: relative;
         width: 8.8rem;
         border-bottom: 1px solid #8E8E8E; }
-      .inputWrapperBot__row-placehold--arrow {
+      .inputWrapperTime__row-placehold--arrow {
         position: absolute;
         right: 3.65rem;
         bottom: 22.55rem;
         height: 8px;
         width: 16px; }
 
+.inputWrapperBot {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  height: 5.5rem;
+  border-bottom: 1px solid #8E8E8E; }
+
+.reserveBtnBlk {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 6.4rem;
+  width: 24.5rem;
+  margin: 3.2rem auto 0 auto;
+  background: var(--btn-background-blk); }
+
+@media only screen and (min-width: 768px) {
+  .bookingContainer {
+    grid-template-rows: minmax(auto, 60rem) minmax(auto, 53rem) minmax(auto, 32.8rem);
+    grid-template-columns: [full-start] min(11.4rem) [center-start] repeat(4, [col-start] minmax(10.75rem, auto) [col-end]) [center-end] min(11.4rem) [full-end]; }
+
+  .bookingRowOne__imageDesktop {
+    display: none; }
+  .bookingRowOne__imageTablet {
+    display: block;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+    width: 100%; }
+  .bookingRowOne__image {
+    display: none; }
+
+  .rowOneWrapper {
+    top: 0; }
+    .rowOneWrapper__txt {
+      margin: 1.6rem 9.8rem 4rem 9.8rem; }
+
+  .forumContainer {
+    height: 54.5rem;
+    width: 54rem;
+    top: 39rem; }
+
+  .inputWrapperDate {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 80%;
+    margin: 3.2rem 4.8rem 3.2rem 4.8rem; }
+    .inputWrapperDate__row {
+      margin: 0; }
+    .inputWrapperDate__txt {
+      margin-right: 5.2rem; }
+
+  .inputWrapperTime {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 80%;
+    margin: 3.2rem 4.8rem 3.2rem 4.8rem; }
+    .inputWrapperTime__row {
+      margin: 0; }
+      .inputWrapperTime__row-placehold--arrow {
+        right: 8rem;
+        bottom: 25.75rem; }
+    .inputWrapperTime__txt {
+      margin-right: 5.2rem; }
+
+  .inputWrapperBot {
+    width: 80%;
+    margin: 0 auto 0 auto; }
+
+  .reserveBtnBlk {
+    width: 80%; } }
 @media only screen and (min-width: 768px) {
   .headingXlrg {
     font-size: 48px;
@@ -1480,7 +1571,10 @@ template {
         margin: 0; }
 
   .footerLogo {
-    margin: 6.4rem 0 auto 3.9rem; } }
+    margin: 6.4rem 0 auto 3.9rem; }
+
+  .footerContainerBooking {
+    display: flex; } }
 @media only screen and (min-device-width: 1024px) and (orientation: landscape) {
   .footerContainer__inner {
     margin-left: 30%; } }
