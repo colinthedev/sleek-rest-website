@@ -9,9 +9,6 @@
 .summContainerOne {
     grid-row: 3 / 4;
     grid-column: full-start / full-end;
-
-    // &__inner {
-    // }
 }
 
 .summOneWrapper {
@@ -271,7 +268,7 @@
         position: absolute;
         text-align: center;
         margin: 8rem auto 2.4rem auto;
-        color: #ffffff;
+        color: var(--color-text-white);
     }
 
     &__image {

@@ -1,0 +1,206 @@
+.bookingContainer {
+    display: grid;
+    background: var(--color-background-white);
+    grid-template-rows: minmax(auto, 60rem) minmax(auto, 53rem)minmax(auto, 44rem);
+    grid-template-columns: [full-start] min(2.4rem) [center-start] repeat(2, [col-start] minmax(10.75rem, auto)[col-end]) [center-end] min(2.4rem) [full-end];
+}
+
+.bookingRowOne {
+    grid-row: 1 / 2;
+    grid-column: full-start / full-end;
+    position: relative;
+    
+    &__image {
+        @include backgroundImageFull();
+        height: 100%;
+        width: 100%;
+    }
+}
+
+.rowOneWrapper {
+    position: absolute;
+    top: 5.25rem;
+    text-align: center;
+
+    &__header {
+        color: var(--color-text-white);
+    }
+
+    &__txt {
+        display: flex;
+        color: var(--color-text-white);
+        margin: 1.6rem 1.75rem 2.4rem 1.75rem;
+    }
+}
+
+.bookingRowTwo {
+    grid-row: 2 / 3;
+    grid-column: center-start / center-end;
+}
+
+.svgContainer {
+    display: none;
+
+    // position: relative;
+    // width: 540px;
+    // height: 560px;
+    // margin-left: 73.5rem;
+    // top: -10rem;
+
+    &__curve {
+        display: none;
+
+        position: absolute;
+    }
+
+    &__lines {
+        display: none;
+
+        position: absolute;
+    }
+}
+
+.forumContainer {
+    position: absolute;
+    top: 45rem;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    height: 58.5rem;
+    width: 32.7rem;
+    background: var(--color-background-white);
+}
+
+.inputWrapperTop {
+    display: flex;
+    flex-direction: column;
+
+    &__placehold {
+        display: block;
+        height: 4.5rem;
+        width: 90%;
+        width: 263px;
+        margin: 3.2rem auto 0 auto;
+        border-bottom: 1px solid #8E8E8E;
+        font-family: 'Spartan', sans-serif;
+        color: #111111;
+        opacity: 0.5;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 28px;
+        letter-spacing: -.22px;
+    }
+
+    &__placehold:focus {
+        opacity: 1;
+    }
+}
+
+.inputWrapperMid {
+    // display: flex;
+    margin: 3.2rem 19.2rem 0 3.2rem;
+    width: 263px;
+
+
+    &__txt {
+        font-family: 'Spartan', sans-serif;
+        font-weight: 300;
+        font-size: 18px;
+        line-height: 28px;
+        letter-spacing: -0.225px;
+        color: #111111; 
+    }
+
+    &__row {
+        display: flex;
+        flex-wrap: nowrap;
+        margin: .8rem auto 3.2rem 0;
+        height: 45px;
+
+        &-placehold {
+            text-align: center;
+            font-family: 'Spartan', sans-serif;
+            font-size: 18px;
+            line-height: 28px;
+            letter-spacing: -0.225px;
+            color: #111111;
+            opacity: 0.5;
+
+            &--month,
+            &--day {
+               width: 7.3rem; 
+               border-bottom: 1px solid #8E8E8E;
+               margin-right: 1.4rem;
+            }
+
+            &--year {
+                width: 8.8rem;
+                border-bottom: 1px solid #8E8E8E;
+            }
+
+            &--month:focus,
+            &--day:focus,
+            &--year:focus {
+                opacity: 1;
+            }
+        }
+    }
+}
+
+.inputWrapperBot {
+    margin: 3.2rem 19.2rem 0 3.2rem;
+    width: 263px;
+
+    &__txt {
+        font-family: 'Spartan', sans-serif;
+        font-weight: 300;
+        font-size: 18px;
+        line-height: 28px;
+        letter-spacing: -0.225px;
+        color: #111111; 
+    }
+
+    &__row {
+        display: flex;
+        flex-wrap: nowrap;
+        margin: .8rem auto 3.2rem 0;
+        height: 45px;
+        
+        &-placehold {
+            text-align: center;
+            font-family: 'Spartan', sans-serif;
+            font-size: 18px;
+            line-height: 28px;
+            letter-spacing: -0.225px;
+            color: #111111;
+
+            &--hour,
+            &--minute {
+                width: 7.3rem; 
+                border-bottom: 1px solid #8E8E8E;
+                margin-right: 1.4rem;
+                opacity: 0.5;
+            }
+
+            &--hour:focus,
+            &--minute:focus {
+                opacity: 1;
+            }
+
+            &--amPM {
+                position: relative;
+                width: 8.8rem;
+                border-bottom: 1px solid #8E8E8E;
+            }
+
+            &--arrow {
+                position: absolute;
+                right: 3.65rem;
+                bottom: 22.55rem;
+                height: 8px;
+                width: 16px;
+            }
+        }
+    }
+}

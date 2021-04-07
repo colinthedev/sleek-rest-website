@@ -15,8 +15,75 @@
   
   <title>Frontend Mentor | Dine Website Challenge</title>
 </head>
-<body>
+<body class="bookingContainer">
+  <div class="bookingRowOne">
+    <img src="/images/booking/hero-bg-mobile@2x.jpg" alt="plate of food" class="bookingRowOne__image">
+      <!-- <img src="/images/booking/hero-bg-tablet@2x.jpg" alt="plate of food" class="bookingRowOne__imageTablet">
+        <img src="/images/booking/hero-bg-desktop@2x.jpg" alt="plate of food" class="bookingRowOne__imageDesktop"> -->
+    <div class="rowOneWrapper">
+      <img src="/images/logo.svg" alt="Brand name" class="bookingLogo">
+      <h1 class="rowOneWrapper__header headingXlrg">Reservations</h1>
+      <span class="rowOneWrapper__txt summary">We can’t wait to host you. If you have any special requirements please feel free to call on the phone number below. We’ll be happy to accommodate you.</span>
+      <button class="bookTableTxt reserveBtn">Reserve Place</button>
+    </div>
+  </div>
 
+  <div class="bookingRowTwo">
+    <div class="svgContainer">
+      <img src="/images/patterns/pattern-curve-top-left.svg" alt="Grey background image" class="svgContainer__curve">
+        <img src="/images/patterns/pattern-lines.svg" alt="Stacked tan lines" class="svgContainer__lines">
+    </div>
+    <div class="forumContainer">
+      <div class="inputWrapperTop">
+        <label for="Name">
+          <input type="text" class="inputWrapperTop__placehold" placeholder="Name" name="Name" required>
+        </label>
+        <label for="email" class="inputWrapperTop__txt">
+          <input type="text" class="inputWrapperTop__placehold" placeholder="Email" name="Email" required>
+        </label>
+      </div>
 
+      <div class="inputWrapperMid">
+        <label for="Pick a date" class="inputWrapperMid__txt">
+          <b>Pick a date</b>
+        </label>
+        <div class="inputWrapperMid__row">
+          <input type="text" class="inputWrapperMid__row-placehold inputWrapperMid__row-placehold--month" placeholder="MM" name="Month" required>
+          <input type="text" class="inputWrapperMid__row-placehold inputWrapperMid__row-placehold--day" placeholder="DD" name="Day" required>
+          <input type="text" class="inputWrapperMid__row-placehold inputWrapperMid__row-placehold--year" placeholder="YYYY" name="Year" required>
+        </div>
+      </div>
+
+      <div class="inputWrapperBot">
+        <label for="Pick a time" class="inputWrapperBot__txt">
+          <b>Pick a time</b>
+        </label>
+        <div class="inputWrapperBot__row">
+          <input type="text" class="inputWrapperBot__row-placehold inputWrapperBot__row-placehold--hour" placeholder="09" name="hour" required>
+          <input type="text" class="inputWrapperBot__row-placehold inputWrapperBot__row-placehold--minute" placeholder="00" name="minute" required>
+          <input type="button" onclick="func();" value="AM" class="inputWrapperBot__row-placehold inputWrapperBot__row-placehold--amPM" >
+          <img src="/images/icons/icon-arrow.svg" alt="Expandable arrow button" class="inputWrapperBot__row-placehold--arrow">
+        </div>
+      </div>
+
+      <button class="bookTableTxt reserveBtnBlk">Make Reservation</button>
+    </div>
+  </div>
+
+  <div class="footerContainer">
+    <img src="/images/logo.svg" alt="Brand name" class="footerLogo">
+    <div style="margin-bottom:7rem;" class="footerContainer__inner">
+      <div class="footerContainer__inner-locationWrapper">
+        <span class="footerTxt">Marthwaite, Sedbergh</span>
+        <span class="footerTxt">Cumbria</span>
+        <span class="footerTxt">+00 44 123 4567</span>
+      </div>
+      <div class="footerContainer__inner-timeWrapper">
+        <span class="footerTxt">Open Times</span>
+        <span class="footerTxt">Mon - Fri: 09:00 am - 10:00 pm</span>
+        <span class="footerTxt">Sat - Sun: 09:00 am - 11:30 pm</span>
+      </div>
+    </div>
+  </div>
 </body>
 </html>
