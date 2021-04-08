@@ -19,6 +19,13 @@
   margin: 3.2rem auto 0 auto;
   border: 1px solid #ffffff; }
 
+.bookTableBtnHeader:hover {
+  background: var(--btn-background-wht);
+  color: var(--color-text-btn-black); }
+
+.bookTableBtnHeader:active {
+  transform: scale(0.95); }
+
 .bookTableBtnSlider {
   cursor: pointer;
   display: flex;
@@ -30,9 +37,20 @@
   background: var(--color-background-codGray);
   order: 4; }
 
+.bookTableBtnSlider:hover {
+  background: var(--btn-background-wht);
+  color: var(--color-text-btn-black);
+  border: 1px solid #111111; }
+
+.bookTableBtnSlider:active {
+  transform: scale(0.95); }
+
 .sliderContainers__sliderBtn {
   cursor: pointer;
   opacity: .5; }
+
+.sliderContainers__sliderBtn:hover {
+  transform: scale(1.1); }
 
 .sliderContainers__sliderBtn.active {
   opacity: 1; }
@@ -56,8 +74,13 @@
     background: transparent;
     border: 1px solid #ffffff;
     color: var(--color-text-white); }
+  .btnWrapper__bookTableBtnReserv:hover {
+    background: var(--btn-background-wht);
+    color: var(--color-text-btn-black); }
+  .btnWrapper__bookTableBtnReserv:active {
+    transform: scale(0.95); }
 
-.reserveBtn {
+.reserveBtnClear {
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -66,6 +89,31 @@
   width: 24.5rem;
   margin: 0 auto 0 auto;
   border: 1px solid #ffffff; }
+
+.reserveBtnClear:hover {
+  background: var(--btn-background-wht);
+  color: var(--color-text-btn-black); }
+
+.reserveBtnClear:active {
+  transform: scale(0.95); }
+
+.reserveBtnBlk {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 6.4rem;
+  width: 24.5rem;
+  margin: 3.2rem auto 0 auto;
+  background: var(--btn-background-blk); }
+
+.reserveBtnBlk:hover {
+  color: var(--color-text-btn-black);
+  background: var(--btn-background-wht);
+  border: 1px solid #111111; }
+
+.reserveBtnBlk:active {
+  transform: scale(0.95); }
 
 .topLeftCurveSumm {
   display: none; }
@@ -210,6 +258,7 @@
   --color-text-btn-white: #FFFFFF;
   --color-text-btn-black: #111111;
   --btn-background-blk:#111111;
+  --btn-background-wht:#FFFFFF;
   --color-lines-beaver: #9e7f66;
   --color-background-shuttleGray: #5C6779; }
 
@@ -1063,16 +1112,6 @@ template {
   align-items: center;
   height: 5.5rem;
   border-bottom: 1px solid #8E8E8E; }
-
-.reserveBtnBlk {
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 6.4rem;
-  width: 24.5rem;
-  margin: 3.2rem auto 0 auto;
-  background: var(--btn-background-blk); }
 
 @media only screen and (min-width: 768px) {
   .bookingContainer {

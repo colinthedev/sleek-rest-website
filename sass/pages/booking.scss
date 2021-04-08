@@ -224,17 +224,6 @@
     }
 }
 
-.reserveBtnBlk {
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 6.4rem;
-    width: 24.5rem;
-    margin: 3.2rem auto 0 auto;
-    background: var(--btn-background-blk);
-}
-
 //Tablet
 @media only screen and (min-width: 768px) {
 
