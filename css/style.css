@@ -153,6 +153,9 @@
   .logo {
     margin: 6.5rem 0 0 16.7rem; }
 
+  .bookingLogo {
+    margin: 6.5rem 90% 15.3rem .55rem; }
+
   .divideLineL {
     top: 20rem;
     left: 65rem; }
@@ -944,11 +947,9 @@ template {
 .svgContainer {
   display: none; }
   .svgContainer__curve {
-    display: none;
-    position: absolute; }
+    display: none; }
   .svgContainer__lines {
-    display: none;
-    position: absolute; }
+    display: none; }
 
 .forumContainer {
   position: absolute;
@@ -1132,6 +1133,55 @@ template {
 
   .reserveBtnBlk {
     width: 80%; } }
+@media only screen and (min-width: 1024px) and (max-width: 1321px) {
+  .rowOneWrapper__txt {
+    margin: 1.6rem 23rem 4rem 23rem; } }
+@media only screen and (min-width: 1322px) {
+  .bookingContainer {
+    grid-template-rows: minmax(auto, 60rem) minmax(auto, 32rem) minmax(auto, 24rem);
+    grid-template-columns: [full-start] min(11.4rem) [center-start] repeat(4, [col-start] minmax(10.75rem, auto) [col-end]) [center-end] min(11.4rem) [full-end]; }
+
+  .bookingRowOne__imageDesktop {
+    display: block;
+    width: 100%;
+    height: 100%; }
+  .bookingRowOne__imageTablet {
+    display: none; }
+  .bookingRowOne__image {
+    display: none; }
+
+  .rowOneWrapper {
+    width: 44rem;
+    height: 100%;
+    margin-left: 16.5rem; }
+    .rowOneWrapper__header {
+      text-align: left;
+      margin-bottom: 2.4rem; }
+    .rowOneWrapper__txt {
+      text-align: left;
+      margin: 0; }
+
+  .forumContainer {
+    top: 24.5rem;
+    margin-left: 73.5rem; }
+
+  .svgContainer {
+    display: block;
+    position: absolute;
+    left: -10rem;
+    width: 100%;
+    height: 32rem; }
+    .svgContainer__curve {
+      display: block;
+      top: 0;
+      left: 10rem;
+      position: relative;
+      border-radius: 0px 0px 100px 0px; }
+    .svgContainer__lines {
+      display: block;
+      top: -18rem;
+      left: 75rem;
+      position: relative; } }
 @media only screen and (min-width: 768px) {
   .headingXlrg {
     font-size: 48px;
