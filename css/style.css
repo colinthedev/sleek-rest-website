@@ -127,8 +127,7 @@
 .divideLine {
   display: block;
   position: absolute;
-  top: 36.5rem;
-  margin-left: calc(50% - 40px); }
+  top: 36.5rem; }
 
 .hamburgerLinesSumm {
   display: none; }
@@ -725,23 +724,20 @@ template {
 
 .summContainerOne {
   grid-row: 3 / 4;
-  grid-column: full-start / full-end; }
+  grid-column: center-start / center-end; }
 
 .summOneWrapper {
   position: relative;
   display: flex;
   flex-direction: column;
-  align-content: center;
-  width: 90%;
-  margin: 0 5% 0 5%; }
+  align-items: center; }
   .summOneWrapper__enjoyablePlace {
     display: block;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     box-shadow: 0px 15px 0px rgba(237, 237, 237, 0.35);
-    margin: 0 5% 0 5%;
-    width: 90%;
+    width: 32.7rem;
     height: 40rem;
     position: absolute;
     top: -7rem;
@@ -763,24 +759,21 @@ template {
 
 .summContainerTwo {
   grid-row: 4 / 5;
-  grid-column: full-start / full-end;
+  grid-column: center-start / center-end;
   margin-top: 8rem; }
 
 .summTwoWrapper {
   position: relative;
   display: flex;
   flex-direction: column;
-  align-content: center;
-  width: 90%;
-  margin: 0 5% 0 5%; }
+  align-items: center; }
   .summTwoWrapper__localFood {
     display: block;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     box-shadow: 0px 15px 0px rgba(237, 237, 237, 0.35);
-    margin: 0 5% 0 5%;
-    width: 90%;
+    width: 32.7rem;
     height: 40rem;
     position: absolute;
     top: -7rem;
@@ -828,14 +821,14 @@ template {
 
 .salmonWrapper {
   display: flex;
-  flex-direction: column; }
+  flex-direction: column;
+  align-items: center; }
   .salmonWrapper__salmon {
     display: block;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    margin: 0 5% 0 5%;
-    width: 90%;
+    width: 32.7rem;
     height: 24.5rem; }
   .salmonWrapper__salmonTabDesktop {
     display: none; }
@@ -851,14 +844,14 @@ template {
 
 .filetWrapper {
   display: flex;
-  flex-direction: column; }
+  flex-direction: column;
+  align-items: center; }
   .filetWrapper__filet {
     display: block;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    margin: 0 5% 0 5%;
-    width: 90%;
+    width: 32.7rem;
     height: 24.5rem; }
   .filetWrapper__filetTabDesktop {
     display: none; }
@@ -874,14 +867,14 @@ template {
 
 .mousseWrapper {
   display: flex;
-  flex-direction: column; }
+  flex-direction: column;
+  align-items: center; }
   .mousseWrapper__mousse {
     display: block;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    margin: 0 5% 0 5%;
-    width: 90%;
+    width: 32.7rem;
     height: 24.5rem; }
   .mousseWrapper__mousseTabDesktop {
     display: none; }
@@ -899,7 +892,7 @@ template {
 
 .cateringContainer {
   grid-row: 6 / 7;
-  grid-column: full-start / full-end; }
+  grid-column: center-start / center-end; }
   .cateringContainer__inner-imageDesktop {
     display: none; }
   .cateringContainer__inner-imageTablet {
@@ -1297,12 +1290,6 @@ template {
       opacity: .99;
       height: 100%; } }
 @media only screen and (max-device-width: 767px) and (orientation: landscape) {
-  .salmonWrapper__salmon,
-  .filetWrapper__filet,
-  .mousseWrapper__mousse {
-    margin: 0 14.10% 0 14.10%;
-    width: 70%; }
-
   .txtWrapperEnjoy__enjoyableHeading {
     margin: 40rem 8rem 1.6rem 8rem; }
 
@@ -1664,7 +1651,7 @@ template {
 
   .footerContainerBooking {
     display: flex; } }
-@media only screen and (min-device-width: 1024px) and (orientation: landscape) {
+@media only screen and (min-width: 1024px) and (orientation: landscape) {
   .footerContainer__inner {
     margin-left: 30%; } }
 @media only screen and (min-width: 1400px) {

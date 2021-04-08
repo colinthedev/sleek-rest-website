@@ -8,16 +8,14 @@
 
 .summContainerOne {
     grid-row: 3 / 4;
-    grid-column: full-start / full-end;
+    grid-column: center-start / center-end;
 }
 
 .summOneWrapper {
     position: relative;
     display: flex;
     flex-direction: column;
-    align-content: center;
-    width: 90%;
-    margin: 0 5% 0 5%;
+    align-items: center;
 
     &__enjoyablePlace {
         @include imageSummary();
@@ -48,7 +46,7 @@
 
 .summContainerTwo {
     grid-row: 4 / 5;
-    grid-column: full-start / full-end;
+    grid-column: center-start / center-end;
     margin-top: 8rem;
 }
 
@@ -56,9 +54,7 @@
     position: relative;
     display: flex;
     flex-direction: column;
-    align-content: center;
-    width: 90%;
-    margin: 0 5% 0 5%;
+    align-items: center;
 
     &__localFood {
         @include imageSummary();
@@ -125,6 +121,7 @@
 .salmonWrapper {
     display: flex;
     flex-direction: column;
+    align-items: center;
 
     &__salmon {
         @include imageMenu();
@@ -154,6 +151,7 @@
 .filetWrapper {
     display: flex;
     flex-direction: column;
+    align-items: center;
 
     &__filet {
         @include imageMenu();
@@ -183,6 +181,7 @@
 .mousseWrapper {
     display: flex;
     flex-direction: column;
+    align-items: center;
 
     &__mousse {
         @include imageMenu();
@@ -212,7 +211,7 @@
 
 .cateringContainer {
     grid-row: 6 / 7;
-    grid-column: full-start / full-end;
+    grid-column: center-start / center-end;
 
     &__inner {
 
