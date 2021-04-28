@@ -4,17 +4,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Spartan:wght@300;600;700&display=swap" rel="stylesheet">
 
-  <!-- font-family: 'Spartan', sans-serif; -->
-  <!-- 15 hours -->
-
   <link rel="stylesheet" href="css/style.css">
+
+  <link rel="booking" href="booking.html">
   
-  <title>Frontend Mentor | Dine Website Challenge</title>
+  <title>Dine Website</title>
 </head>
   <body class="indexContainer">
 <!-- Start of grid row 1 -->
@@ -28,7 +25,7 @@
       <img src="/images/logo.svg" alt="Brand name" class="logo">
       <h1 class="headerContainer__since1989 headingXlrg">Exquisite dining <br>since 1989</h1>
         <span class="headerContainer__missionStatement summary">Experience our seasonal menu in beautiful country surroundings. Eat the freshest produce from the comfort of our farmhouse.</span>
-      <button class="bookTableTxt bookTableBtnHeader">Book a table</button>
+      <button id="toBooking" class="bookTableTxt bookTableBtnHeader" type="button">Book a table</button>
     </div>
 <!-- Start of grid row 3 -->
     <div class="summContainerOne">
@@ -113,7 +110,7 @@
       <div class="contentWrapper">
         <h1 id="title" class="contentWrapper__gatheringHeading headingXlrgBold">Family Gathering</h1>
         <span id="description" class="contentWrapper__txt summary">We love catering for entire families. So please bring everyone along for a special meal with your loved ones. We’ll provide a memorable experience for all.</span>
-        <button class="bookTableTxt bookTableBtnSlider">Book a table</button>
+        <button id="toBooking2" class="bookTableTxt bookTableBtnSlider" type="button">Book a table</button>
         <div class="sliderContainers">
           <button onclick="familyChange();" id="family" class="sliderContainers__sliderBtn active headingMedium">Family Gathering</button>
           <button onclick="specialChange();" id="special" class="sliderContainers__sliderBtn headingMedium">Special Events</button>
@@ -128,7 +125,7 @@
         <img src="/images/homepage/tablet/ready-bg-tablet@2x.jpg" alt="plate of food" class="reservationContainer__imageTablet">
         <img src="/images/homepage/desktop/ready-bg-desktop@2x.jpg" alt="plate of food" class="reservationContainer__imageDesktop">
       <div class="btnWrapper">
-        <button class="bookTableTxt btnWrapper__bookTableBtnReserv">Book a table</button>
+        <button id="toBooking3" class="bookTableTxt btnWrapper__bookTableBtnReserv"  type="button">Book a table</button>
       </div>
     </div>
 <!-- Start of grid row 8 -->

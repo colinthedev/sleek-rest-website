@@ -80,6 +80,23 @@
   .btnWrapper__bookTableBtnReserv:active {
     transform: scale(0.95); }
 
+.homeBtnClear {
+  position: absolute;
+  top: 0;
+  left: 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 1.75rem 0 0 1.75rem;
+  border-bottom: solid 1px #ffffff; }
+
+.homeBtnClear:hover {
+  transform: scale(1.1);
+  border: solid 1px #ffffff;
+  width: 7rem;
+  height: 2.5rem; }
+
 .reserveBtnClear {
   cursor: pointer;
   display: flex;
@@ -87,7 +104,7 @@
   justify-content: center;
   height: 6.4rem;
   width: 24.5rem;
-  margin: 0 auto 0 auto;
+  margin: 2.4rem auto 0 auto;
   border: 1px solid #ffffff; }
 
 .reserveBtnClear:hover {
@@ -114,6 +131,87 @@
 
 .reserveBtnBlk:active {
   transform: scale(0.95); }
+
+.AMCheckMark {
+  display: none; }
+
+.AMCheckMark.active {
+  display: inline-block; }
+
+.PMCheckMark {
+  display: none; }
+
+.PMCheckMark.active {
+  display: inline-block; }
+
+.amPMHide {
+  display: none; }
+
+.amPMActive {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  bottom: -11rem;
+  right: .85rem;
+  height: 10.3rem;
+  width: 10.6rem;
+  box-shadow: 0px 5px 10px 0px #888888;
+  background: #ffffff;
+  z-index: 300; }
+  .amPMActive__row {
+    cursor: pointer;
+    text-align: center;
+    height: 2.8rem;
+    width: 6rem;
+    font-family: 'Spartan', sans-serif;
+    font-size: 18px;
+    line-height: 28px;
+    letter-spacing: -0.225px;
+    color: #111111; }
+
+.margin {
+  margin-left: 7rem; }
+
+.formControl {
+  position: relative; }
+
+.formControl.success input {
+  border-color: #2ecc71; }
+
+.formControl.error input {
+  border-color: #B54949; }
+
+.formControl small {
+  font-family: 'Spartan', sans-serif;
+  font-weight: 500;
+  font-size: 10px;
+  line-height: 11px;
+  letter-spacing: -0.125px;
+  color: #B54949;
+  position: absolute;
+  bottom: -1.75rem;
+  left: 0rem;
+  visibility: hidden; }
+
+.inputWrapperDate.formControl small {
+  font-family: 'Spartan', sans-serif;
+  font-weight: 500;
+  font-size: 10px;
+  line-height: 11px;
+  letter-spacing: -0.125px;
+  color: #B54949;
+  position: absolute;
+  bottom: -1.75rem;
+  left: 0rem;
+  visibility: hidden; }
+
+.inputWrapperDate.formControl.error small {
+  visibility: visible; }
+
+.formControl.error small {
+  visibility: visible; }
 
 .topLeftCurveSumm {
   display: none; }
@@ -147,7 +245,7 @@
   .bookingLogo {
     margin: 5.6rem 90% 6.4rem 3.9rem; }
 
-  .reserveBtn {
+  .reserveBtnClear {
     display: none; }
 
   .hamburgerLinesSumm {
@@ -600,6 +698,15 @@ template {
 [hidden] {
   display: none; }
 
+.errorText {
+  font-family: 'Spartan', sans-serif;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 28px;
+  text-align: center;
+  letter-spacing: -0.225px;
+  color: red; }
+
 .headingXlrg {
   font-family: 'Spartan', sans-serif;
   font-weight: 300;
@@ -621,7 +728,8 @@ template {
   font-size: 18px;
   line-height: 28px;
   text-align: center;
-  letter-spacing: -0.225px; }
+  letter-spacing: -0.225px;
+  color: #111111; }
 
 .headingMedium {
   font-family: 'Spartan', sans-serif;
@@ -976,7 +1084,8 @@ template {
   top: 5.25rem;
   text-align: center; }
   .rowOneWrapper__header {
-    color: var(--color-text-white); }
+    color: var(--color-text-white);
+    margin-bottom: 1.6rem; }
   .rowOneWrapper__txt {
     display: flex;
     color: var(--color-text-white);
@@ -1104,8 +1213,25 @@ template {
   justify-content: space-around;
   align-items: center;
   height: 5.5rem;
-  border-bottom: 1px solid #8E8E8E; }
+  border-bottom: 1px solid #8E8E8E;
+  z-index: -100; }
+  .inputWrapperBot__button-minus {
+    height: .65rem;
+    width: 2rem;
+    margin-left: .5rem; }
+  .inputWrapperBot__button-plus {
+    height: 1.85rem;
+    width: 2rem;
+    z-index: 100;
+    margin-right: .5rem; }
 
+@media only screen and (max-width: 767px) {
+  .inputWrapperTime__row-placehold--arrow {
+    right: 1rem;
+    bottom: 2.05rem; }
+
+  .amPMActive {
+    right: -.75rem; } }
 @media only screen and (min-width: 768px) {
   .bookingContainer {
     grid-template-rows: minmax(auto, 60rem) minmax(auto, 53rem) minmax(auto, 32.8rem);
@@ -1154,8 +1280,12 @@ template {
     .inputWrapperTime__row {
       margin: 0; }
       .inputWrapperTime__row-placehold--arrow {
-        right: 8rem;
-        bottom: 25.75rem; }
+        cursor: pointer;
+        height: 1rem;
+        right: 3rem;
+        bottom: 2rem; }
+      .inputWrapperTime__row-placehold--arrow.show {
+        transform: rotate(180deg); }
     .inputWrapperTime__txt {
       margin-right: 5.2rem; }
 

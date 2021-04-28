@@ -84,6 +84,25 @@
 }
 
 //Buttons Booking Page
+.homeBtnClear {
+    position: absolute;
+    top: 0;
+    left: 0;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1.75rem 0 0 1.75rem;
+    border-bottom: solid 1px #ffffff;
+}
+
+.homeBtnClear:hover {
+    transform: scale(1.1);
+    border: solid 1px #ffffff;
+    width: 7rem;
+    height: 2.5rem;
+}
+
 .reserveBtnClear {
     cursor: pointer;
     display: flex;
@@ -91,7 +110,7 @@
     justify-content: center;
     height: 6.4rem;
     width: 24.5rem;
-    margin: 0 auto 0 auto;
+    margin: 2.4rem auto 0 auto;
     border: 1px solid #ffffff;
 }
 
@@ -123,6 +142,106 @@
 
 .reserveBtnBlk:active {
     transform: scale(.95);
+}
+
+//Expand Arrow Booking Page
+
+.AMCheckMark {
+    display: none;
+}
+
+.AMCheckMark.active {
+    display: inline-block;
+}
+
+.PMCheckMark {
+    display: none;
+}
+
+.PMCheckMark.active {
+    display: inline-block;
+}
+
+.amPMHide {
+    display: none;
+}
+
+.amPMActive {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    bottom: -11rem;
+    right: .85rem;
+    height: 10.3rem;
+    width: 10.6rem;
+    box-shadow: 0px 5px 10px 0px #888888;
+    background: #ffffff;
+    z-index: 300;
+
+    &__row {
+        cursor: pointer;
+        text-align: center;
+        height: 2.8rem;
+        width: 6rem;
+        font-family: 'Spartan', sans-serif;
+        font-size: 18px;
+        line-height: 28px;
+        letter-spacing: -0.225px;
+        color: #111111;
+    }
+}
+
+//Form Validation
+.margin {
+    margin-left: 7rem;
+}
+
+.formControl {
+    position: relative;
+}
+
+.formControl.success input {
+    border-color: #2ecc71;
+}
+
+.formControl.error input {
+    border-color: #B54949;
+}
+
+.formControl small {
+    font-family: 'Spartan', sans-serif;
+    font-weight: 500;
+    font-size: 10px;
+    line-height: 11px;
+    letter-spacing: -0.125px;
+    color: #B54949;
+    position: absolute;
+    bottom: -1.75rem;
+    left: 0rem;
+    visibility: hidden;
+}
+
+.inputWrapperDate.formControl small {
+    font-family: 'Spartan', sans-serif;
+    font-weight: 500;
+    font-size: 10px;
+    line-height: 11px;
+    letter-spacing: -0.125px;
+    color: #B54949;
+    position: absolute;
+    bottom: -1.75rem;
+    left: 0rem;
+    visibility: hidden;
+}
+
+.inputWrapperDate.formControl.error small {
+    visibility: visible;
+}
+
+.formControl.error small {
+	visibility: visible;
 }
 
 //Curves
@@ -168,7 +287,7 @@
         margin: 5.6rem 90% 6.4rem 3.9rem;
     }
 
-    .reserveBtn {
+    .reserveBtnClear {
         display: none;
     }
 

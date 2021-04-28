@@ -1,5 +1,24 @@
 'use strict';
+//INDEX PAGE
 
+// Buttons(3) to go to booking page
+let bookingBtn1 = document.getElementById("toBooking");
+let bookingBtn2 = document.getElementById('toBooking2');
+let bookingBtn3 = document.getElementById("toBooking3")
+
+bookingBtn1.addEventListener('click', function() {
+    location.href = "booking.html";
+});
+
+bookingBtn2.addEventListener('click', function() {
+    location.href = "booking.html";
+});
+
+bookingBtn3.addEventListener('click', function() {
+    location.href = "booking.html";
+});
+
+// --Catering Container--
 //On click add active class to selected button
 let btnContainer = document.querySelector('.sliderContainers');
 let btn = document.querySelectorAll('.sliderContainers__sliderBtn');
@@ -66,4 +85,5 @@ socialButton.addEventListener('click', function() {
     description.textContent = 'Are you looking to have a larger social event? No problem! We’re more than happy to cater for big parties. We’ll work with you to make your event a hit with everyone.';
 });
 // ---------------------------------------------------------------------
+
 

@@ -4,19 +4,20 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Spartan:wght@300;600;700&display=swap" rel="stylesheet">
 
   <!-- font-family: 'Spartan', sans-serif; -->
 
   <link rel="stylesheet" href="css/style.css">
+
+  <link rel="index" href="index.html">
   
-  <title>Frontend Mentor | Dine Website Challenge</title>
+  <title>Dine Website</title>
 </head>
 <body class="bookingContainer">
   <div class="bookingRowOne">
+    <button id="toHome" class="bookTableTxt homeBtnClear" type="button">Home</button>
     <img src="/images/booking/hero-bg-mobile@2x.jpg" alt="plate of food" class="bookingRowOne__image">
       <img src="/images/booking/hero-bg-tablet@2x.jpg" alt="plate of food" class="bookingRowOne__imageTablet">
         <img src="/images/booking/hero-bg-desktop@2x.jpg" alt="plate of food" class="bookingRowOne__imageDesktop">
@@ -33,51 +34,68 @@
       <img src="/images/patterns/pattern-curve-bottom-right.svg" alt="Grey background image" class="svgContainer__curve">
         <img src="/images/patterns/pattern-lines.svg" alt="Stacked tan lines" class="svgContainer__lines">
     </div>
-    <div class="forumContainer">
+    <form id="form" class="forumContainer">
       <div class="inputWrapperTop">
-        <label for="Name">
-          <input type="text" class="inputWrapperTop__placehold" placeholder="Name" name="Name" required>
-        </label>
-        <label for="email" class="inputWrapperTop__txt">
-          <input type="text" class="inputWrapperTop__placehold" placeholder="Email" name="Email" required>
-        </label>
+        <div class="formControl">
+            <input id="name" type="text" class="inputWrapperTop__placehold" placeholder="Name" name="Name">
+          <small class="margin">Error message</small>
+        </div>
+        <div class="formControl">
+            <input id="email" type="text" class="inputWrapperTop__placehold" placeholder="Email" name="Email">
+          <small class="margin">Error message</small>
+        </div>
       </div>
 
-      <div class="inputWrapperDate">
+      <div class="inputWrapperDate formControl">
         <label for="Pick a date" class="inputWrapperDate__txt">
           <b>Pick a date</b>
         </label>
         <div class="inputWrapperDate__row">
-          <input type="text" class="inputWrapperDate__row-placehold inputWrapperDate__row-placehold--month" placeholder="MM" name="Month" required>
-          <input type="text" class="inputWrapperDate__row-placehold inputWrapperDate__row-placehold--day" placeholder="DD" name="Day" required>
-          <input type="text" class="inputWrapperDate__row-placehold inputWrapperDate__row-placehold--year" placeholder="YYYY" name="Year" required>
+          <small>Error message</small>
+          <input id="dateMonth" type="text" class="inputWrapperDate__row-placehold inputWrapperDate__row-placehold--month" placeholder="MM" name="Month">
+          <input id="dateDay" type="text" class="inputWrapperDate__row-placehold inputWrapperDate__row-placehold--day" placeholder="DD" name="Day">
+          <input id="dateYear" type="text" class="inputWrapperDate__row-placehold inputWrapperDate__row-placehold--year" placeholder="YYYY" name="Year">
         </div>
       </div>
 
-      <div class="inputWrapperTime">
+      <div class="inputWrapperTime formControl">
         <label for="Pick a time" class="inputWrapperTime__txt">
           <b>Pick a time</b>
         </label>
+        <small>Error message</small>
         <div class="inputWrapperTime__row">
-          <input type="text" class="inputWrapperTime__row-placehold inputWrapperTime__row-placehold--hour" placeholder="09" name="hour" required>
-          <input type="text" class="inputWrapperTime__row-placehold inputWrapperTime__row-placehold--minute" placeholder="00" name="minute" required>
-          <input type="button" onclick="func();" value="AM" class="inputWrapperTime__row-placehold inputWrapperTime__row-placehold--amPM" >
-          <img src="/images/icons/icon-arrow.svg" alt="Expandable arrow button" class="inputWrapperTime__row-placehold--arrow">
+          <input type="text" class="inputWrapperTime__row-placehold inputWrapperTime__row-placehold--hour" placeholder="09" name="hour">
+          <input type="text" class="inputWrapperTime__row-placehold inputWrapperTime__row-placehold--minute" placeholder="00" name="minute">
+          <input id="value" placeholder="AM" readonly class="inputWrapperTime__row-placehold inputWrapperTime__row-placehold--amPM">
+          <div class="amPMHide">
+            <div class="amPMActive">
+              <div id="AM" class="amPMActive__row">
+                <img src="/images/icons/icon-check.svg" alt="check mark" class="AMCheckMark ">
+                <span class="amPMActive__row-am">AM</span>
+              </div>
+              <div id="PM" class="amPMActive__row">
+                <img src="/images/icons/icon-check.svg" alt="check mark" class="PMCheckMark ">
+                <span class="amPMActive__row-pm">PM</span>
+              </div>
+            </div>
+          </div>
+          <button>
+            <img src="/images/icons/icon-arrow.svg" alt="Expandable arrow button" class="inputWrapperTime__row-placehold--arrow">
+          </button>
         </div>
       </div>
 
       <div class="inputWrapperBot">
-        <button onclick="func();" class="inputWrapperBot__button">
+        <button  class="inputWrapperBot__button">
           <img src="/images/icons/icon-minus.svg" alt="minus button" class="inputWrapperBot__button-minus">
         </button>
         <h2 id="guests" class="headingLrg">4 people</h2>
-        <button onclick="func();" class="inputWrapperBot__button">
+        <button  class="inputWrapperBot__button">
           <img src="/images/icons/icon-plus.svg" alt="plus button" class="inputWrapperBot__button-plus">
         </button>
       </div>
-
-      <button class="bookTableTxt reserveBtnBlk">Make Reservation</button>
-    </div>
+      <button type="submit" class="bookTableTxt reserveBtnBlk">Make Reservation</button>
+    </form>
   </div>
 
   <div class="footerContainerBooking">
@@ -95,5 +113,7 @@
       </div>
     </div>
   </div>
+  <script src="booking.js"></script>
+
 </body>
 </html>

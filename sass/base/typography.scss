@@ -1,3 +1,13 @@
+.errorText {
+    font-family: 'Spartan', sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 28px;
+    text-align: center;
+    letter-spacing: -0.225px;
+    color: red;
+}
+
 //Heading's
 .headingXlrg {
     font-family: 'Spartan', sans-serif;
@@ -23,6 +33,7 @@
     line-height: 28px;
     text-align: center;
     letter-spacing: -0.225px;
+    color: #111111;
 }
 
 .headingMedium {
