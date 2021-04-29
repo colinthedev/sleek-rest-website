@@ -23,14 +23,14 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    box-shadow: 0px 15px 0px rgba(237, 237, 237, .35);
+    box-shadow: 2px 4px 11px 12px rgba(119, 119, 119, 0.212);
     width: 32.7rem;
     height: 40rem;
 }
 
 @mixin imageSummaryTablet {
     display: block;
-    box-shadow: 0px 15px 0px rgba(237, 237, 237, .35);
+    box-shadow: 2px 4px 11px 12px rgba(119, 119, 119, 0.212);
     width: 573px;
     position: absolute;
     top: -7rem;
@@ -55,14 +55,14 @@
 
 @mixin imageCatering {
     display: block;
-    box-shadow: 0px 15px 0px rgba(237, 237, 237, .35);
+    box-shadow: 2px 4px 11px 12px rgba(119, 119, 119, 0.212);
     margin: 8rem 5% 4.8rem 5%;
     width: 90%;
 }
 
 @mixin imageCateringTablet {
     display: block;
-    box-shadow: 0px 15px 0px rgba(237, 237, 237, .35);
+    box-shadow: 2px 4px 11px 12px rgba(119, 119, 119, 0.212);
     margin: 12rem auto 5.6rem auto;
     width: 573px;
     z-index: 100;
@@ -70,7 +70,7 @@
 
 @mixin imageCateringDesktop {
     display: block;
-    box-shadow: 0px 15px 0px rgba(237, 237, 237, .35);
+    box-shadow: 2px 4px 11px 12px rgba(119, 119, 119, 0.212);
     width: 540px;
     height: 600px;
     z-index: 100;
