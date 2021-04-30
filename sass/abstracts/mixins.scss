@@ -23,14 +23,14 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    box-shadow: 2px 4px 11px 12px rgba(119, 119, 119, 0.212);
+    box-shadow: 0px 4px 10px 5px rgba(153, 153, 153, 0.212);
     width: 32.7rem;
     height: 40rem;
 }
 
 @mixin imageSummaryTablet {
     display: block;
-    box-shadow: 2px 4px 11px 12px rgba(119, 119, 119, 0.212);
+    box-shadow: 0px 4px 10px 5px rgba(153, 153, 153, 0.212);
     width: 573px;
     position: absolute;
     top: -7rem;

@@ -21,15 +21,15 @@ bookingBtn3.addEventListener('click', function() {
 // --Catering Container--
 //On click add active class to selected button
 let btnContainer = document.querySelector('.sliderContainers');
-let btn = document.querySelectorAll('.sliderContainers__sliderBtn');
+let btns = document.querySelectorAll('.sliderContainers__sliderBtn'); 
 
-btn.forEach(el => {
+btns.forEach(el => {
     el.addEventListener('click', function() {
-        btnContainer.querySelector('.active').classList.remove('active');
-        
-        el.classList.add('active');
+      btnContainer.querySelectorAll('.active').forEach(el => el.classList.remove('active'));
+      el.classList.add('active');
+      el.querySelector('.cateringLine').classList.add('active')
     });
-});
+  });
 // ---------------------------------------------------------------------
 
 //Global Variables Catering Section-------------------------------------
@@ -78,5 +78,4 @@ socialButton.addEventListener('click', function() {
     imageSml.src = 'images/homepage/mobile/social-events-mobile@2x.jpg';
 });
 // ---------------------------------------------------------------------
-
 

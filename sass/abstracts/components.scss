@@ -49,12 +49,20 @@
     opacity: .5;
 }
 
+.sliderContainers__sliderBtn.active {
+    opacity: 1;
+}
+
 .sliderContainers__sliderBtn:hover {
     transform: scale(1.1);
 }
 
-.sliderContainers__sliderBtn.active {
-    opacity: 1;
+.cateringLine {
+    display: none;
+    height: 2px;
+    width: 7rem;
+    margin-right: 1rem;
+    background: var(--color-lines-beaver);
 }
 
 .btnWrapper {
@@ -397,6 +405,22 @@
     .fullLineBreak { //Full width divide line
         margin: 2.4rem auto 2.4rem 0;
         width: 90%;
+    }
+
+    // Add tan line on selected button "family gathering","special events","social events"
+    .sliderContainers__sliderBtn {
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+    }
+
+    .sliderContainers__sliderBtn.active {
+        margin-left: -8rem;
+    }
+
+    .cateringLine.active {
+        transform: rotate(360deg);
+        display: inline-block;
     }
 
     //Buttons

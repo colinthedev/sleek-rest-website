@@ -49,11 +49,18 @@
   cursor: pointer;
   opacity: .5; }
 
+.sliderContainers__sliderBtn.active {
+  opacity: 1; }
+
 .sliderContainers__sliderBtn:hover {
   transform: scale(1.1); }
 
-.sliderContainers__sliderBtn.active {
-  opacity: 1; }
+.cateringLine {
+  display: none;
+  height: 2px;
+  width: 7rem;
+  margin-right: 1rem;
+  background: var(--color-lines-beaver); }
 
 .btnWrapper {
   display: inline-block;
@@ -330,6 +337,18 @@
   .fullLineBreak {
     margin: 2.4rem auto 2.4rem 0;
     width: 90%; }
+
+  .sliderContainers__sliderBtn {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center; }
+
+  .sliderContainers__sliderBtn.active {
+    margin-left: -8rem; }
+
+  .cateringLine.active {
+    transform: rotate(360deg);
+    display: inline-block; }
 
   .bookTableBtnHeader {
     margin: 0 0 19.8rem 16.5rem; }
@@ -844,7 +863,7 @@ template {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    box-shadow: 2px 4px 11px 12px rgba(119, 119, 119, 0.212);
+    box-shadow: 0px 4px 10px 5px rgba(153, 153, 153, 0.212);
     width: 32.7rem;
     height: 40rem;
     position: absolute;
@@ -880,7 +899,7 @@ template {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    box-shadow: 2px 4px 11px 12px rgba(119, 119, 119, 0.212);
+    box-shadow: 0px 4px 10px 5px rgba(153, 153, 153, 0.212);
     width: 32.7rem;
     height: 40rem;
     position: absolute;
@@ -1461,7 +1480,7 @@ template {
       display: none; }
     .summOneWrapper__enjoyablePlaceTablet {
       display: block;
-      box-shadow: 2px 4px 11px 12px rgba(119, 119, 119, 0.212);
+      box-shadow: 0px 4px 10px 5px rgba(153, 153, 153, 0.212);
       width: 573px;
       position: absolute;
       top: -7rem;
@@ -1477,7 +1496,7 @@ template {
       display: none; }
     .summTwoWrapper__localFoodTablet {
       display: block;
-      box-shadow: 2px 4px 11px 12px rgba(119, 119, 119, 0.212);
+      box-shadow: 0px 4px 10px 5px rgba(153, 153, 153, 0.212);
       width: 573px;
       position: absolute;
       top: -7rem;
