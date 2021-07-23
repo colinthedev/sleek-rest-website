@@ -843,6 +843,23 @@ template {
   background: var(--color-background-codGray);
   color: var(--color-text-white); }
 
+.headerImgContainer {
+  opacity: 0; }
+
+.logo {
+  transform: translateY(100px);
+  opacity: 0; }
+
+.headerContainer__since1989 {
+  transform: translateY(100px);
+  opacity: 0; }
+
+.headerContainer__missionStatement {
+  opacity: 0; }
+
+.bookTableBtnHeader {
+  opacity: 0; }
+
 .indexContainer {
   display: grid;
   background: var(--color-background-white);

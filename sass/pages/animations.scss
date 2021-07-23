@@ -1,0 +1,23 @@
+
+// Hide on initial page visit so animation starts smooth
+    .headerImgContainer {
+        opacity: 0;
+    }
+
+    .logo {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+
+    .headerContainer__since1989 {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+
+    .headerContainer__missionStatement {
+        opacity: 0;
+    }
+
+    .bookTableBtnHeader {
+        opacity: 0;
+    }
