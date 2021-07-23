@@ -1,8 +1,8 @@
+![](images/readme/dine-README-thumbnail.png)
 
 # sleek-rest-website :hamburger:
 
 restaurant website with error handling on booking page
-![](assets/readme/photosnap-README-thumbnail.png)
 
 ## About :point_down:
 
