@@ -1585,7 +1585,7 @@ template {
       flex-direction: column;
       align-items: flex-start;
       width: 52%;
-      margin-bottom: 7.2rem; }
+      margin-bottom: 0rem; }
       .mousseWrapper__inner-heading {
         margin: 0; }
       .mousseWrapper__inner-txt {

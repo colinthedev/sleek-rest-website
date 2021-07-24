@@ -32,7 +32,7 @@ gsap.registerPlugin(ScrollTrigger);
         .to('.bookTableBtnHeader', {...heroDefaults,}, "-=1");
 
 // Summary one sec
-    let summaryOneDefaults = { // Default values 
+    let summaryOneDefaults = { // Default values summary one
         opacity: 0, 
         duration: 2, 
         ease: "sine.out"
@@ -53,7 +53,7 @@ gsap.registerPlugin(ScrollTrigger);
         .from('.txtWrapperEnjoy__txt', {...summaryOneDefaults}, "-=1.55");
 
 // Summary two sec
-    let summaryTwoDefaults = { // Default values
+    let summaryTwoDefaults = { // Default values summary two
         opacity: 0, 
         duration: 2, 
         ease: "sine.out"
@@ -62,7 +62,7 @@ gsap.registerPlugin(ScrollTrigger);
     let summaryTwoTl = gsap.timeline({
         scrollTrigger: {
             trigger: '.txtWrapperLocal__localHeading',
-            start: 'top bottom'
+            start: 'center bottom'
         },
     });
 
@@ -74,15 +74,67 @@ gsap.registerPlugin(ScrollTrigger);
         .from('.txtWrapperLocal__txt', {...summaryTwoDefaults}, "-=1.55");
 
 // Menu sec
-    
+    let menuImgDefault = { // Menu images defaults
+        x: 700, 
+        opacity: 0, 
+        duration: 2.5, 
+        ease: "sine.out"
+    };
 
+    let menuTxtDefault = { // Menu txt defaults
+        y: 40, 
+        opacity: 0, 
+        duration: 1, 
+        ease: "sine.out"
+    };
 
+    let menuTl = gsap.timeline({
+        scrollTrigger: {
+            trigger: '.menuWrapper',
+            start: 'top bottom'
+        },
+    });
 
+    menuTl
+        .from('.salmonImgAnimation', {...menuImgDefault})
+        .from('.salmonWrapper__inner', {...menuTxtDefault}, "+=.05")
+        .from('.filetImgAnimation', {...menuImgDefault}, "-=3")
+        .from('.filetWrapper__inner', {...menuTxtDefault}, "-=.5")
+        .from('.mousseImgAnimation', {...menuImgDefault}, "-=3")
+        .from('.mousseWrapper__inner', {...menuTxtDefault}, "-=.5");
 
+// Catering sec
+    let cateringDefault = { // Catering defaults
+        opacity: 0, 
+        duration: 1.5
+    };
 
+    let cateringTl = gsap.timeline({
+        scrollTrigger: {
+            trigger: '.cateringContainer__inner',
+            start: 'center bottom'
+        },
+    });
 
+    cateringTl
+        .from('.contentWrapper__gatheringHeading', {...cateringDefault, y: 50, ease: "sine.out"})
+        .from('.contentWrapper__txt', {...cateringDefault, y: 50, ease: "sine.out"}, "-=.5")
+        .from('#family', {...cateringDefault, x: -200, ease: "back.out(1.7)"}, "-=1.25")
+        .from('#special', {...cateringDefault, x: -200, ease: "power2.out"}, "-=.75")
+        .from("#social", {...cateringDefault, x: -200, ease: "power2.out"}, "-=.75")
+        .from('#toBooking2', {...cateringDefault, x: 500, ease: "sine.out"}, "-=.5");
 
+// Booking CTA footer
+    let bookingCtaTl = gsap.timeline({
+        scrollTrigger: {
+            trigger: '.reservationContainer',
+            start: 'bottom bottom'
+        },
+    });
 
+    bookingCtaTl
+        .from('.reservationContainer__heading', {y: 65, opacity: 0, duration: 1.5, ease: "sine.out"})
+        .from('#toBooking3', {x: 200, opacity: 0, duration: 1.5, ease: "bounce.out"}, "-=.85")
 
 
 
