@@ -16,7 +16,7 @@ Built with a mobile first approach.
 >
 Deployed using [Github-pages](https://colinthedev.github.io/sleek-rest-website/)
 
-## Final Considerations :memo:
+## Final Considerations
 
 This project was great practice to strengthen positioning layout with responsive design.   
 <br>
