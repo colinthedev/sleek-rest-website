@@ -2,9 +2,9 @@
 //INDEX PAGE
 
 // Buttons(3) to go to booking page
-let bookingBtn1 = document.getElementById("toBooking");
-let bookingBtn2 = document.getElementById('toBooking2');
-let bookingBtn3 = document.getElementById("toBooking3")
+const bookingBtn1 = document.getElementById("toBooking");
+const bookingBtn2 = document.getElementById('toBooking2');
+const bookingBtn3 = document.getElementById("toBooking3")
 
 bookingBtn1.addEventListener('click', function() {
     location.href = "booking.html";
@@ -18,35 +18,38 @@ bookingBtn3.addEventListener('click', function() {
     location.href = "booking.html";
 });
 
+// ---------------------------------------------------------------------
+
 // --Catering Container--
 //On click add active class to selected button
-let btnContainer = document.querySelector('.sliderContainers');
-let btns = document.querySelectorAll('.sliderContainers__sliderBtn'); 
+const eventsBtnContainer = document.querySelector('.sliderContainers');
+const eventsButtons = document.querySelectorAll('.sliderContainers__sliderBtn');
 
-btns.forEach(el => {
-    el.addEventListener('click', function() {
-      btnContainer.querySelectorAll('.active').forEach(el => el.classList.remove('active'));
-      el.classList.add('active');
-      el.querySelector('.cateringLine').classList.add('active')
-    });
-  });
+eventsButtons.forEach(el => {
+    el.addEventListener('click', function () {
+        eventsBtnContainer.querySelectorAll('.active').forEach(el => el.classList.remove('active'));
+        el.classList.add('active');
+        el.querySelector('.cateringLine').classList.add('active')
+    })
+});
+
 // ---------------------------------------------------------------------
 
 //Global Variables Catering Section-------------------------------------
 
 // Buttons
-let familyButton = document.getElementById('family');
-let specialButton = document.getElementById('special');
-let socialButton = document.getElementById('social');
+const familyButton = document.getElementById('family');
+const specialButton = document.getElementById('special');
+const socialButton = document.getElementById('social');
 
 // Txt content 'Family Gathering''Special Events''Social Events'
-let title = document.getElementById('title');
-let description = document.getElementById('description');
+const title = document.getElementById('title');
+const description = document.getElementById('description');
 
 // Images 'Family Gathering''Special Events''Social Events' 
-let imageLrg = document.getElementById('desktopImage');
-let imageMed = document.getElementById('tabletImage');
-let imageSml = document.getElementById('mobileImage');
+const imageLrg = document.getElementById('desktopImage');
+const imageMed = document.getElementById('tabletImage');
+const imageSml = document.getElementById('mobileImage');
 
 //Family Gathering-----------------------------------------------------
 familyButton.addEventListener('click', function() {
@@ -78,4 +81,3 @@ socialButton.addEventListener('click', function() {
     imageSml.src = 'images/homepage/mobile/social-events-mobile@2x.jpg';
 });
 // ---------------------------------------------------------------------
-

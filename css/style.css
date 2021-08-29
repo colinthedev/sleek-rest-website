@@ -50,7 +50,7 @@
   opacity: .5; }
 
 .sliderContainers__sliderBtn.active {
-  opacity: 1; }
+  opacity: 1 !important; }
 
 .sliderContainers__sliderBtn:hover {
   transform: scale(1.1); }
