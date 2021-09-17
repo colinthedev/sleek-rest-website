@@ -119,9 +119,9 @@ gsap.registerPlugin(ScrollTrigger);
     cateringTl
         .from('.contentWrapper__gatheringHeading', {...cateringDefault, y: 50, ease: "sine.out"})
         .from('.contentWrapper__txt', {...cateringDefault, y: 50, ease: "sine.out"}, "-=.5")
-        .from('#family', {...cateringDefault, x: -200, ease: "back.out(1.7)"}, "-=1.25")
-        .from('#special', {...cateringDefault, x: -200, ease: "power2.out"}, "-=.75")
-        .from("#social", {...cateringDefault, x: -200, ease: "power2.out"}, "-=.75")
+        .from('#family', { ...cateringDefault, x: -550, ease: "back.out(1.7)"}, "-=1.25")
+        .from('#special', {...cateringDefault, x: -550, ease: "power2.out"}, "-=.75")
+        .from("#social", {...cateringDefault, x: -550, ease: "power2.out"}, "-=.75")
         .from('#toBooking2', {...cateringDefault, x: 500, ease: "sine.out"}, "-=.5");
 
 // Booking CTA footer

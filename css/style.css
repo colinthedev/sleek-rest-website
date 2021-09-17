@@ -1037,16 +1037,18 @@ template {
 .cateringContainer {
   grid-row: 6 / 7;
   grid-column: center-start / center-end; }
-  .cateringContainer__inner-imageDesktop {
-    display: none; }
-  .cateringContainer__inner-imageTablet {
-    display: none; }
-  .cateringContainer__inner-image {
-    display: block;
-    box-shadow: 2px 4px 11px 12px rgba(119, 119, 119, 0.212);
-    margin: 8rem 5% 4.8rem 5%;
-    width: 90%;
-    max-height: 40rem; }
+  .cateringContainer__inner {
+    z-index: 200; }
+    .cateringContainer__inner-imageDesktop {
+      display: none; }
+    .cateringContainer__inner-imageTablet {
+      display: none; }
+    .cateringContainer__inner-image {
+      display: block;
+      box-shadow: 2px 4px 11px 12px rgba(119, 119, 119, 0.212);
+      margin: 8rem 5% 4.8rem 5%;
+      width: 90%;
+      max-height: 40rem; }
 
 .sliderContainers {
   display: flex;

@@ -214,6 +214,7 @@
     grid-column: center-start / center-end;
 
     &__inner {
+        z-index: 200;
 
         &-imageDesktop {
             display: none;
